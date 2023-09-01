@@ -11,7 +11,7 @@
 
 <body>
     <nav>
-        <img class="logo-kaiban-principal" src="kaiban.jpg">
+        <img class="logo-kaiban-principal" src="imagens/kaiban.jpg">
     </nav>
     <div class="container">
     
@@ -22,7 +22,7 @@
             </div>
             <div id="div-busca">
                 <input type="text" id="txtBusca" placeholder="Pesquisar.." />
-                <img src="lupa.png" id="btnBusca" alt="Buscar" />
+                <img src="imagens/lupa.png" id="btnBusca" alt="Buscar" />
             </div>
             <div id="div-novo">
                 <h2 id="novo">Novo</h2>
