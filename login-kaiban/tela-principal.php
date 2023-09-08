@@ -13,8 +13,7 @@
     <nav>
         <img class="logo-kaiban-principal" src="imagens/kaiban.jpg">
     </nav>
-    <div class="container">
-    
+<div class="container">
         <div class="barra-lateral">
             <div id="usuario">
                 <img id="img-cadastro" src="imagens/user-interface.png">
@@ -62,16 +61,18 @@
                 </div>
             </div>
         </div>
-    <div class="display">
-        <div class="banner">
-            <img id="banner-secretaria" src="imagens/banner-secretaria.png">
-        </div>
-        <div class="bloco">
-            <div class="position">
-                <p>Notas</p>
-                <h5>Recentes</h5>
-            </div>
-        </div>
+      <div id="container">
+        <img id="banner"src="imagens/Secretaria.png"/>
+        <div class="notas">
+        <p>Notas:</p>
+        <h4>Recentes</h4>
+        <fieldset class="fieldset-border">
+        <legend class="legend-border">Nova nota</legend>
+        </fieldset>
+        <h3>Bloco de notas</h3>
+        <img id="mais" src="imagens/mais.png">
+        </div>        
+     </div> 
     </div>
 </div>
 </body>
