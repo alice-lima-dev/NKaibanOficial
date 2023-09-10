@@ -1,214 +1,359 @@
-* {
-    margin: 0px;
-}
+*{
 
-nav {
-    background-color: #3F1573;
-    width: 100%;
-    height: 15%;
-    position: fixed;
-}
+        margin: 0px;
 
-.logo-kaiban-principal {
-    width: 5%;
-    margin-left: 2%;
-    padding: 8px;
-}
+    }
 
-#div-busca {
-    background-color: rgb(199, 188, 188);
-    border: solid 1px;
-    border-radius: 15px;
-    width: 299px;
-    color: aliceblue;
-    margin-top: 25px;
-    margin-left: 10px;
-}
 
-.barra-lateral {
-    background-color: #b897e3;
-    height: 900px;
-    position: static;
-    width: 21%;
-    position: fixed;
-}
 
-#txtBusca {
-    float: left;
-    background-color: transparent;
-    padding-left: 1px;
-    font-style: italic;
-    font-size: 18px;
-    border: none;
-    height: 32px;
-    width: 260px;
-}
 
-#btnBusca {
-    width: 30px;
-}
+    nav {
 
-.container {
+        background-color: #3F1573;
+
+        width: 100%;
+
+        height: 15%;
+
+        position: fixed;
+
+    }
+
+
+
+
+    .logo-kaiban-principal {
+
+        width: 5%;
+
+        margin-left: 2%;
+
+        padding: 8px;
+
+    }
+
+
+
+
+    #div-busca {
+
+        background-color: rgb(199, 188, 188);
+
+        border: solid 1px;
+
+        border-radius: 15px;
+
+        width: 299px;
+
+        color: aliceblue;
+
+        margin-top: 25px;
+
+        margin-left: 10px;
+
+    }
+
+
+
+
+    .barra-lateral {
+
+        background-color: #b897e3;
+
+        height: 900px;
+
+        position: static;
+
+        width: 21%;
+
+        position: fixed;
+
+    }
+
+
+
+
+    #txtBusca {
+
+        float: left;
+
+        background-color: transparent;
+
+        padding-left: 1px;
+
+        font-style: italic;
+
+        font-size: 18px;
+
+        border: none;
+
+        height: 32px;
+
+        width: 260px;
+
+    }
+
+
+
+
+    #btnBusca {
+
+        width: 30px;
+
+    }
+
+
+
+
+    .containe{
+
+        display: flex;
+
+    }
+
+
+
+
+    #novo {
+
+        color: black;
+
+        font-family: sans-serif;
+
+        text-align: center;
+
+        margin-top: 5px;
+
+        font-size: 20px;
+
+        margin-left: 5px;
+
+        display: flex;
+
+    }
+
+
+
+
+    #div-novo {
+
+        background-color: chartreuse;
+
+        width: 70%;
+
+        display: flex;
+
+        margin-top: 20px;
+
+        margin-left: 10%;
+
+    }
+    #img-novo {
+
+        width: 20px;
+
+        margin-left: 10%;
+
+        height: 22px;
+
+        margin-top: 4px;
+
+    }
+
+
+
+
+    a {
+
+        text-decoration: none;
+
+        color: black;
+
+        font-family: sans-serif;
+
+        text-align: left;
+        display: flex;
+
+    }
+
+
+
+
+    .topicos {
+
+        text-align: center;
+
+        margin-top: 20%;
+
+        margin-left: 30%;
+
+    }
+
+
+
+
+    p {
+
+        margin-top: 15%;
+
+        font-size: 20px;
+
+    }
+
+
+
+
+    .div-notas {
+
+        position: relative;
+
+    }
+
+
+
+
+    #linha-vertical {
+
+        height: 100%;
+
+        border-right: 1px solid #3F1573;
+
+    }
+
+
+
+
+    #usuario {
+
+        color: black;
+
+        font-family: sans-serif;
+
+        display: flex;
+
+    }
+
+
+
+
+    #nome {
+
+        font-size: 14px;
+
+        margin-left: 20px;
+
+        margin-top: 28px;
+
+    }
+
+
+
+
+    #img-cadastro {
+
+        width: 35px;
+
+        height: 35px;
+
+        margin-top: 15px;
+
+        margin-left: 50px;
+
+    }
+    #icone {
+
+        width: 5%;
+
+        height: 5%;
+
+        margin-top: 15px;
+
+    }
+    #lixeira {
+
+        display: flex;
+
+    }
+    .linha-horizontal {
+
+        width: 10%;
+
+        border-right: 1px solid #3F1573;
+
+    }
+
+.display{
     display: flex;
 }
 
-#novo {
-    color: black;
-    font-family: sans-serif;
-    text-align: center;
-    margin-top: 5px;
-    font-size: 20px;
-    margin-left: 15px;
-}
 
-#div-novo {
-    background-color: chartreuse;
-    width: 50%;
-    display: flex;
-    margin-top: 20px;
-    margin-left: 20%;
-}
+    .bloco {
 
-#img-novo {
-    width: 22px;
-    margin-left: 35%;
-    height: 22px;
-    margin-top: 4px;
-}
+        background-color: white;
 
-a {
-    text-decoration: none;
-    color: black;
-    font-family: sans-serif;
-    text-align: left;
-}
-
-.topicos {
-    text-align: center;
-    margin-top: 20%;
-    margin-left: 30%;
-}
-
-p {
-    margin-top: 15%;
-    font-size: 20px;
-}
-
-.div-notas {
-    position: relative;
-}
-
-#linha-vertical {
-    height: 100%;
-    border-right: 1px solid #3F1573;
-}
-
-#usuario {
-    color: black;
-    font-family: sans-serif;
-    display: flex;
-}
-
-#nome {
-    font-size: 14px;
-    margin-left: 20px;
-    margin-top: 28px;
-}
-
-#img-cadastro {
-    width: 35px;
-    height: 35px;
-    margin-top: 15px;
-    margin-left: 50px;
-}
-
-#icone {
-    width: 5%;
-    height: 5%;
-    margin-top: 15px;
-}
-
-#lixeira {
-    display: flex;
-}
-
-.linha-horizontal {
-    width: 10%;
-    border-right: 1px solid #3F1573;
-}
-
-.bloco {
-    background-color: white;
-    border-radius: 150px;
-}
-
-#container {
-    display: inline-block;
-    position: relative;
-}
-
-#container p {
-    position: absolute;
-    top: 300px;
-    right: 1000px;
-    font-size: 20px;
-    color: black;
-    font-family: sans-serif;
-}
-
-#container h4 {
-    position: absolute;
-    top: 560px;
-    right: 980px;
-    font-size: 15px;
-    color: black;
-    font-family: sans-serif;
-}
-
-#container h3 {
-    position: absolute;
-    top: 530px;
-    right: 180px;
-    font-size: 15px;
-    color: black;
-    font-family: sans-serif;
-}
-
-.borda-branca {
-    border-radius: 15px;
-    border: #b897e3 solid 3px;
-    position: absolute;
-}
-
-#banner {
-    width: 79%;
-    margin-left: 21%;
-    margin-top: 5%;
-}
-
-#container fieldset {
-    position: absolute;
-}
-
-.fieldset-border {
-    border: 1px solid #b897e3 !important;
-    background-color: #b897e3;
-    padding: 0 1.4em 1.4em 1.4em !important;
-    margin-top: 0px;
-    -webkit-box-shadow: 0px 0px 0px 0px #000;
-    box-shadow: 0px 0px 0px 0px #000;
-    border-radius: 5px;
-    margin-left: 30%;
-    width: 15%;
-}
-
-.fieldset-border .legend-border {
-    font-size: 1.2em !important;
-    padding: 0 10px;
-    font-family: sans-serif;
-}
-
-#mais {
-    width: 35px;
-    position: absolute;
-}
+        border-radius: 150px;
+    }
+    .container {
+        width: 70%;
+        min-width: 50%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 50%;
+      }
+      
+      .kanban-heading {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-family: sans-serif;
+        margin-left: 80%;
+      }
+      
+      .kanban-heading-text {
+        font-size: 1.8rem;
+        background-color: tomato;
+        border-radius: 0.5rem;
+        margin: 1rem;
+        margin-left: 80%;
+      }
+      .kanban-board {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-family: sans-serif;
+      }
+      
+      .kanban-block {
+         margin-left: 15%;
+        border-radius: 0.3rem;
+      }
+      
+      #todo {
+        background-color: #fec6d1;
+      }
+      #inprogress {
+        background-color: #ffaf00;
+      }
+      
+      #done {
+        background-color:#3F1573;
+      }
+      .task {
+        background-color: white;
+        margin: 0.2rem 0rem 0.3rem 0rem;
+        border: 0.1rem solid black;
+        border-radius: 0.2rem;
+        padding: 0.5rem 0.2rem 0.5rem 2rem;
+      }
+      
+      #task-button {
+        margin: 0.2rem 0rem 0.1rem 0rem;
+        background-color: white;
+        border-radius: 0.2rem;
+        width: 100%;
+        border: 0.25rem solid black;
+        padding: 0.5rem 2.7rem;
+        border-radius: 0.3rem;
+        font-size: 1rem;
+      }
