@@ -12,3 +12,7 @@ function drop(event) {
     event.target.appendChild(document.getElementById(data));
 }
 
+function toggleMenu() {
+    var menu = document.getElementById("menu");
+    menu.classList.toggle("active");
+}
