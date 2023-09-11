@@ -14,7 +14,55 @@
     <nav>
         <div class="logo-kaiban-principal" scr="imagens/kaiban.jpg">
     </nav>
-<div class="containe"> 
+    <div class="container">
+    
+        <div class="barra-lateral">
+            <div id="usuario">
+                <img id="img-cadastro" src="imagens/user-interface.png">
+                <p id="nome">Nome do usuario</p>
+            </div>
+            <div id="div-busca">
+                <input type="text" id="txtBusca" name="procurar" placeholder="Pesquisar.." />
+                <img src="imagens/lupa.png" id="btnBusca" alt="Buscar" />
+            </div>
+            <div id="div-novo">
+                <h2 id="novo">Novo</h2>
+                <img id="img-novo" src="imagens/mais.png">
+            </div>
+            <div class="topicos">
+                <div>
+                    <a href="#">
+                        <p>Início</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <p>Tarefa</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <p>Calendarío</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <p>Lixeira</p>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <p>Cadernos</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <p>Compartilhados</p>
+                    </a>
+                </div>
+            </div>
+        </div>
     <div class="display">
         <div class="barra-lateral"> 
 
@@ -107,10 +155,11 @@
         <div class="kanban-heading">
             <strong class="kanban-heading-text">Kanban Board</strong>
         </div>
-        <div class="kanban-board">
-            <div id="todo">To Do</div>
-            <div id="inprogress">In Progress</div>
-            <div id="done">Done</div>
+        <div class="bloco">
+            <div class="position">
+                <p id="notas">Notas</p>
+                <h5 id="notas-recente">Recentes</h5>
+            </div>
         </div>
     </div>
     <div class="kanban-block" id="todo">
