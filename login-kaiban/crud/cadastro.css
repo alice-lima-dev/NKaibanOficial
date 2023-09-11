@@ -1,6 +1,6 @@
 @font-face {
     font-family: kirome;
-    src: url(fontes/Kirome.otf);
+    src: url(kirome/Kirome.otf);
 }
 
 body {
@@ -25,11 +25,9 @@ body {
     border-radius: 90px;
     border-color: aliceblue;
     border-style: solid;
-    width: 80%;
+    width: 75%;
     height: 85%;
-    margin: 4px;
     background-color: blueviolet;
-    display: flex;
 }
 h3 {
     font-size: 30px;
@@ -43,7 +41,7 @@ h3 {
     background-color: white;
     border-radius: 40px;
     height: 80%;
-    width: 100%;
+    width: 80%;
     padding: 20px;
     margin-left: 10%;
     margin-right: 15%;
@@ -61,14 +59,16 @@ h3 {
     margin-top: 5%;
 }
 #img-logar{
-    height: 50%;
+    width: 70%;
+    height: 70%;
     margin-top: 80px;
     margin-left: 15px;
 }
 #logo{
-    width: 30%;
-    margin: auto;
+    width: 20%;
+    margin-left: 140px;
     border-radius: 50%;
+    height: 100px;
 }
 
 .formLogin h1 {
@@ -97,6 +97,11 @@ h5 {
 .page {
     display: flex;
 }
+
+.teste {
+    display: flex;
+}
+
 .nav {
     background-color: #3F1573;
 }
@@ -173,6 +178,7 @@ label {
 }
 
 .form-cadastro {
+    border: #ffffff 2px solid;
     background-color: #ffffff;
     width: 30%;
     padding: 20px;
@@ -204,7 +210,7 @@ a {
 }
 
 .image {
-    width: 350px;
+    width: 490px;
     margin-top: 130px;
     margin-left: 150px;
     margin-right: 250px;
@@ -235,19 +241,12 @@ a {
     }
 
     .teste {
-        display: flex;
-    }
-
-    #logo{
-        width: 30%;
-        margin: auto;
+        display: block;
     }
 
     .formLogin {
-        margin-left: 6%;
-        margin-right: 6%;
-        max-width: 1000px;
-        margin-top: 10% !important;
+        margin: 5%;
+        height: 40%;
     }
 
     h5 {
@@ -262,13 +261,9 @@ a {
         display: none;
     }
 
-    #bemvindo {
-        margin-left: 28%;
-        font-size: 25px;
-    }
 }
 
-@media screen and (min-width:481px) and (max-width: 700px) {
+@media (min-width:481px) and (max-width: 700px) {
     .teste {
         display: flex;
     }
@@ -277,16 +272,10 @@ a {
         font-size: 23px;
     }
 
-    #bemvindo {
-        margin-left: 30%;
-        font-size: 25px;
-    }
-
     .formLogin {
         margin-left: 6%;
         margin-right: 6%;
-        max-width: 80vw;
-        height: 85%;
+        max-width: 1000px;
     }
 
     #img-logar{
@@ -307,15 +296,21 @@ a {
     }
 }
 
-@media screen and (min-width:700px) and (max-width: 900px) {
+@media (min-width:700px) and (max-width: 900px) {
     #bemvindo {
         margin-left: 25%;
         font-size: 24px;
     }
     .formLogin{
-        margin-top: 3%;
-        height: 85%;
-        width: 100vw;
+        max-width: 1000px;
+        margin-right: 6%;
+        margin-left: 6%;
+        margin-top: 15%;
+        height: 70%;
+    }
+
+    #img-logar{
+        width: 50%;
     }
     h5 {
         font-size: 17px;
@@ -326,10 +321,6 @@ a {
         margin-left: 55%;
         width: 35%;
         margin-top: 35%;
-        display: none;
-    }
-
-    #img-logar {
         display: none;
     }
 
