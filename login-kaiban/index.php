@@ -15,20 +15,18 @@
 <body>
     <div class="page">
         <div class="teste">
-            <div class="texto-descritivo">
-                <img id="logo-corpo" src="imagens/kaiban.jpg">
-                <h5>É a melhor forma de se organizar, realizar tarefas diarias, livros que foram e que serão lidos e emprestados,
-                    bilhetes a ser entregue e tudo que você precida para ter uma vida mais organizada. </h5>
+            <div>
+                <img id="img-logar" src="imagens/img-logar.png">
             </div>
             <form action="login/validar_login.php" method="POST" class="formLogin">
-                <h3>KAIBAN</h3>
+               <img id="logo" src="imagens/kaiban.jpg">
 
                 <label for="Usuário">Email</label>
                 <input type="Nome" placeholder="Email" autofocus="true" id="email" name="email" />
                 <label for="password">Senha</label>
                 <input type="password" placeholder="Digite sua Senha" id="senha" name="senha" />
                 <!-- <button type="reset" id="botao" onclick="login()">Entrar</button> -->
-                <input type="submit" value="logar">
+                <input type="submit" id="botao" value="Entrar">
                 <a href="crud/cadastro.php"><h4 id="conta">Não tem conta ?</h4></a> 
                 <a href="login/redefinir.php"><h4 id="conta2">Redefinir Senha</h4></a> 
             </form>
