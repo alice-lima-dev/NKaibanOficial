@@ -1,6 +1,6 @@
 @font-face {
     font-family: kirome;
-    src: url(kirome/Kirome.otf);
+    src: url(fontes/Kirome.otf);
 }
 
 body {
@@ -27,7 +27,6 @@ body {
     border-style: solid;
     width: 75%;
     height: 85%;
-    background-color: blueviolet;
 }
 h3 {
     font-size: 30px;
@@ -172,7 +171,6 @@ label {
 }
 
 .form-cadastro {
-    border: #ffffff 2px solid;
     background-color: #ffffff;
     width: 30%;
     padding: 20px;

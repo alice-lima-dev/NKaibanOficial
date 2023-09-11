@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="kaiban.jpg" type="image/png">
-    <link rel="stylesheet" href="css/style-principal.css">
+    <link rel="stylesheet" href="./css/style-principal.css">
     <title>Tela principal</title>
 </head>
 
@@ -21,7 +21,7 @@
                 <p id="nome">Nome do usuario</p>
             </div>
             <div id="div-busca">
-                <input type="text" id="txtBusca" placeholder="Pesquisar.." />
+                <input type="text" id="txtBusca" name="procurar" placeholder="Pesquisar.." />
                 <img src="imagens/lupa.png" id="btnBusca" alt="Buscar" />
             </div>
             <div id="div-novo">
@@ -68,8 +68,8 @@
         </div>
         <div class="bloco">
             <div class="position">
-                <p>Notas</p>
-                <h5>Recentes</h5>
+                <p id="notas">Notas</p>
+                <h5 id="notas-recente">Recentes</h5>
             </div>
         </div>
     </div>

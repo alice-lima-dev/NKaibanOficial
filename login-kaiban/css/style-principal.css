@@ -15,22 +15,12 @@ nav {
     padding: 8px;
 }
 
-#div-busca {
-    background-color: rgb(199, 188, 188);
-    border: solid 1px;
-    border-radius: 15px;
-    width: 299px;
-    color: aliceblue;
-    margin-top: 25px;
-    margin-left: 10px;
-}
 
 .barra-lateral {
     background-color: #b897e3;
-    height: 900px;
+    height: 800px;
     position: static;
-    width: 21%;
-    position: fixed;
+   position: fixed;
 }
 
 #txtBusca {
@@ -41,11 +31,23 @@ nav {
     font-size: 18px;
     border: none;
     height: 32px;
-    width: 260px;
+    width: 258px;
+    margin-left: 5px;
 }
-
+#div-busca{
+    display: flex;
+    background-color: #a091de;
+    border: solid 1px;
+    border-radius: 15px;
+    width: 250px;
+    color: black;
+    margin-top: 25px;
+    margin-left: 8px;
+    margin-right: 25px;
+}
 #btnBusca {
     width: 30px;
+    margin-right: 8px;
 }
 
 .container {
@@ -58,20 +60,20 @@ nav {
     text-align: center;
     margin-top: 5px;
     font-size: 20px;
-    margin-left: 15px;
+    margin-left: 35%;
 }
 
 #div-novo {
-    background-color: chartreuse;
-    width: 50%;
+    background-color: #35DB66;
+    width: 80%;
     display: flex;
     margin-top: 20px;
-    margin-left: 20%;
+    margin-left: 8%;
 }
 
 #img-novo {
     width: 22px;
-    margin-left: 35%;
+    margin-left: 30%;
     height: 22px;
     margin-top: 4px;
 }
@@ -81,6 +83,7 @@ a {
     color: black;
     font-family: sans-serif;
     text-align: left;
+    text-decoration: wavy;
 }
 
 .topicos {
@@ -97,10 +100,6 @@ p {
 #banner-secretaria {
     margin-left: 15%;
     width: 90%;
-}
-
-h5 {
-    position: absolute;
 }
 
 .div-notas {
@@ -147,4 +146,7 @@ h5 {
 }
 .display{
     display: block;
+}
+#notas-recentes{
+    margin-left: 50%;
 }
