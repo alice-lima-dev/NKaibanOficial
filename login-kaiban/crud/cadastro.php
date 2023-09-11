@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="kaiban.jpg" type="image/png">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="../crud/cadastro.css">
     <script src="js.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +18,7 @@
 <body>
     <div class="Display">
         <div class="icone-cadastro">
-            <img class="image" src="imagens/Login-rafiki.png">
+        <img class="image" src="../imagens/login-rafiki.png">
         </div>
     <div class="form-cadastro">
         <form class="form">
