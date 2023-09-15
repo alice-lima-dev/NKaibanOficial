@@ -28,7 +28,7 @@
                 <!-- <button type="reset" id="botao" onclick="login()">Entrar</button> -->
                 <input type="submit" id="botao" value="Entrar">
                 <a href="crud/cadastro.php"><h4 id="conta">Não tem conta ?</h4></a> 
-                <a href="login/redefinir.php"><h4 id="conta2">Redefinir Senha</h4></a> 
+                <a href="./login/redefinir.php"><h4 id="conta2">Redefinir Senha</h4></a> 
             </form>
         </div>
     </div>

@@ -5,29 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="kaiban.jpg" type="image/png">
-    <script src="login-kaiban/js.js" defer></script>
+    <script src="js.js" defer></script>
     <link rel="stylesheet" href="css/style-principal.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Tela principal</title>
 </head>
 
 <body>
-<nav class="navbar">
-        <div class="container-nav">
-            <div class="logo">
-                <img src="imagens/kaiban.jpg" alt="Logo Kaiban">
-            </div>
+    <header>
+        <i id="burguer" class="material-icons" onclick="clickMenu()">menu</i>
+        <div id="menu">
+            <nav class="nav" id="nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </nav>
         </div>
-        <!-- <div class="menu-icon" onclick="toggleMenu()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <ul class="menu">
-            <li><a href="#">Bloco de Notas</a></li>
-            <li><a href="#">Calendário</a></li>
-            <li><a href="#">Lixeira</a></li>
-        </ul> -->
-    </nav>
+    </header>
     <div class="container">
         <div class="barra-lateral">
             <div id="usuario">
@@ -76,7 +73,8 @@
                 <button id="task-button">Adicionar nova nota</button>
             </div>
             <div class="task" id="task1">
-                <span>Titulo da tarefa: Nessa parte nossos clientes poderam adicionar suas tarefas, conforme a escolha.</span>
+                <span>Titulo da tarefa: Nessa parte nossos clientes poderam adicionar suas tarefas, conforme a
+                    escolha.</span>
                 <div class="info">
                     <p id="margin">Data: 11/09/2023</p>
                     <p id="margin">10:02</p>

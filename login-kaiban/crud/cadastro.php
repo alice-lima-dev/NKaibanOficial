@@ -54,7 +54,7 @@
             </div>
             <button class="botao-cadastro" onclick="Validar()">Entrar</button>
             <div id="redefinir">
-                <a href="./redefinir.php" class="redefinir-senha">Redefinir Senha?</a>
+                <a href="../login/redefinir.php" class="redefinir-senha">Redefinir Senha?</a>
             </div>
         </form>
     </div>

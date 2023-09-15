@@ -219,32 +219,24 @@ img {
     margin-left: 5%;
 }
 
-.menu-icon {
-    flex-direction: column;
-    cursor: pointer;
-    display: none; /* Oculta o ícone do hambúrguer em telas maiores */
+a {
+    text-decoration: none!important;
+    color: black;
 }
 
-
-.bar {
-    width: 30px;
-    height: 3px;
-    background-color: #fff;
-    margin: 3px 0;
+ul {
+    list-style-type: none;
 }
 
-.menu {
+li {
     list-style: none;
-    display: flex;
 }
 
-.menu li {
-    margin-right: 20px;
+nav {
+    display: none;
 }
-
-.menu a {
-    text-decoration: none;
-    color: #fff;
+header{
+    background-color: #6641cb;
 }
 
 
@@ -318,4 +310,168 @@ img {
     }
 
     /* Adicione estilos específicos para telas menores aqui */
+}
+
+
+#burguer{
+    display: flex;
+    justify-content: start;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+nav {
+    display: none;
+}
+
+header {
+    padding: 20px;
+}
+
+
+@media screen and (max-width: 480px) {
+    #burguer {
+        padding: 20px;
+        display: flex;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    #img-logar{
+        display: none;
+    }
+
+    .teste {
+        display: flex;
+    }
+
+    #logo{
+        width: 30%;
+        margin: auto;
+    }
+
+    .formLogin {
+        margin-left: 6%;
+        margin-right: 6%;
+        max-width: 1000px;
+        margin-top: 10% !important;
+    }
+
+    h5 {
+        font-size: 18px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    #logo-corpo {
+        margin-top: 70%;
+        margin-left: 30%;
+        display: none;
+    }
+
+    #bemvindo {
+        margin-left: 28%;
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-width:481px) and (max-width: 700px) {
+    #burguer {
+        padding: 20px;
+        display: flex;
+    }
+
+    .teste {
+        display: flex;
+    }
+
+    h3 {
+        font-size: 23px;
+    }
+
+    #bemvindo {
+        margin-left: 30%;
+        font-size: 25px;
+    }
+
+    .formLogin {
+        margin-left: 6%;
+        margin-right: 6%;
+        max-width: 80vw;
+        height: 85%;
+    }
+
+    #img-logar{
+        display: none;
+    }
+
+    h5 {
+        font-size: 20px;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    #logo-corpo {
+        margin-top: 68%;
+        margin-left: 35%;
+        width: 35%;
+        display: none;
+    }
+}
+
+@media screen and (min-width:700px) and (max-width: 900px) {
+    #bemvindo {
+        margin-left: 25%;
+        font-size: 24px;
+    }
+    .formLogin{
+        margin-top: 3%;
+        height: 85%;
+        width: 100vw;
+    }
+    h5 {
+        font-size: 17px;
+        margin-left:50%;
+        margin-right: 5%;
+    }
+    #logo-corpo {
+        margin-left: 55%;
+        width: 35%;
+        margin-top: 35%;
+        display: none;
+    }
+
+    #img-logar {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width:900px) {
+    #burguer {
+        display: none;
+    }
+    li{
+        display: none;
+    }
+    nav {
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    ul {
+        display: flex;
+        width: 100%;
+        text-align: center;
+        justify-content: space-evenly;
+    };
+
+    li {
+        display: flex;
+    }
 }

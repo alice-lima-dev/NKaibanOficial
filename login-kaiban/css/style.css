@@ -225,7 +225,30 @@ a {
     text-align: center;
 }
 
+
+#burguer{
+    display: flex;
+    justify-content: start;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+nav {
+    display: none;
+}
+
+header {
+    padding: 20px;
+}
+
+
 @media screen and (max-width: 480px) {
+    #burguer {
+        padding: 20px;
+        display: flex;
+    }
+
     h3 {
         font-size: 20px;
     }
@@ -269,6 +292,11 @@ a {
 }
 
 @media screen and (min-width:481px) and (max-width: 700px) {
+    #burguer {
+        padding: 20px;
+        display: flex;
+    }
+
     .teste {
         display: flex;
     }
@@ -333,4 +361,28 @@ a {
         display: none;
     }
 
+}
+
+@media screen and (min-width:900px) {
+    #burguer {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    ul {
+        display: flex;
+        width: 100%;
+        text-align: center;
+        justify-content: space-evenly;
+    };
+
+    li {
+        display: flex;
+    }
 }
