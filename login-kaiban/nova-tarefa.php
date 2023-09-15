@@ -1,18 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="kaiban.jpg" type="image/png">
     <script src="js.js" defer></script>
     <link rel="stylesheet" href="css/style-principal.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Tela principal</title>
+    <title>Nova tarefa</title>
 </head>
-
 <body>
-    <header>
+<header>
         <img class="nkaiban" src="imagens/kaiban.jpg">
         <i id="burguer" class="material-icons" onclick="clickMenu()">menu</i>
         <div id="menu">
@@ -35,12 +32,7 @@
                 <input type="text" id="txtBusca" name="procurar" placeholder="Pesquisar.." />
                 <img src="imagens/lupa.png" id="btnBusca" alt="Buscar" />
             </div>
-            <div id="div-novo">
-                <a id="href" href="nova-tarefa.php">
-                    <h2 id="novo">Novo</h2>
-                    <img id="img-novo" src="imagens/mais.png" alt="Novo">
-                </a>
-            </div>
+
             <div class="topicos">
                 <div>
                     <a href="../login-kaiban/tela-principal.php">
@@ -56,7 +48,7 @@
                     <a href="lixeira.php">
                         <p>Lixeira</p>
                     </a>
-                </div>
+</div>
             </div>
         </div>
         <div class="display">
@@ -68,7 +60,7 @@
             </div>
         </div>
         <div class="kanban-block" id="todo">
-            <strong class="fazer">Bloco de notas</strong>
+            <strong class="fazer">Adicionar nova tarefa</strong>
             <div class="task-button-block">
                 <button id="task-button">Adicionar nova nota</button>
             </div>
@@ -98,5 +90,4 @@
         </div>
     </div>
 </body>
-
 </html>
