@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js.js" defer></script>
-    <link rel="stylesheet" href="css/style-principal.css">
+    <link rel="stylesheet" href="./css/style-principal.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Nova tarefa</title>
 </head>
+
 <body>
-<header>
+    <header>
         <img class="nkaiban" src="imagens/kaiban.jpg">
         <i id="burguer" class="material-icons" onclick="clickMenu()">menu</i>
         <div id="menu">
@@ -48,7 +50,7 @@
                     <a href="lixeira.php">
                         <p>Lixeira</p>
                     </a>
-</div>
+                </div>
             </div>
         </div>
         <div class="display">
@@ -59,35 +61,24 @@
 
             </div>
         </div>
-        <div class="kanban-block" id="todo">
-            <strong class="fazer">Adicionar nova tarefa</strong>
-            <div class="task-button-block">
-                <button id="task-button">Adicionar nova nota</button>
+        <form method="POST" class="formLogin">
+            <div class="inputs">
+                <input type="text" name="titulo" placeholder="Adicione o titulo de sua nota">
             </div>
-            <div class="task" id="task1">
-                <span>Titulo da tarefa: Nessa parte nossos clientes poderam adicionar suas tarefas, conforme a
-                    escolha.</span>
-                <div class="info">
-                    <p id="margin">Data: 11/09/2023</p>
-                    <p id="margin">10:02</p>
-                </div>
+            <div class="inputs">
+                <input type="text" name="assunto" placeholder="Adicione sua nota">
             </div>
-            <div class="task" id="task2">
-                <span>Task 2</span>
+            <div class="cores">
+                <select name="cores">
+                    <option value="Azul">Azul</option>
+                    <option value="amarelo">Amarelo</option>
+                    <option value="verde">Verde</option>
+                    <option value="rosa">Rosa</option>
+                </select>
             </div>
-            <div class="task" id="task3">
-                <span>Task 3</span>
-            </div>
-            <div class="task" id="task4">
-                <span>Task 4</span>
-            </div>
-            <div class="task" id="task5">
-                <span>Task 5</span>
-            </div>
-            <div class="task" id="task6">
-                <span>Task 6</span>
-            </div>
-        </div>
+        </form>
+    </div>
     </div>
 </body>
+
 </html>

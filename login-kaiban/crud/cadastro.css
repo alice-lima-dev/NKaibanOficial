@@ -124,7 +124,7 @@ label {
     margin-top: 15px;
 }
 
-.botao-cadastro {
+#botao-cadastro {
     border-radius: 5%;
     border: #3F1573 solid 2px;
     background-color: #ffffff;

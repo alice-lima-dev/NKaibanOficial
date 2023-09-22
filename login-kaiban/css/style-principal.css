@@ -112,11 +112,6 @@ a {
     justify-content: center;
     font-family: sans-serif;
 }
-
-#lixinho {
-    width: 20%;
-}
-
 .kanban-heading-text {
     font-size: 1.8rem;
     background-color: tomato;
@@ -239,11 +234,9 @@ header{
 .nkaiban{
     width: 35px;
 }
-#lixeira-div{
-    border: #6641cb solid 2px;
-    
+#lixinho{
+    width: 10%;
 }
-
 
 /* Estilo para telas menores (exemplo de media query) */
 @media screen and (max-width: 768px) {

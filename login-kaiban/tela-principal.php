@@ -78,6 +78,8 @@
                 <div class="info">
                     <p id="margin">Data: 11/09/2023</p>
                     <p id="margin">10:02</p>
+                    <a href="lixeira.php">
+                    <img id="lixinho" src="imagens/lixeira-de-reciclagem.png"></a>
                 </div>
             </div>
             <div class="task" id="task2">

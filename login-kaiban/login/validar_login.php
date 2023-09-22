@@ -1,18 +1,32 @@
-<?php 
+<?php
 session_start();
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    $email = $_POST['email'];
-    $senha = $_POST['senha'];
+include '../crud/conexao.php';
 
-    $emailCorreto= "alunosenai";
-    $senhaCorreta = "4321";
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-    if($email === $emailCorreto && $senha === $senhaCorreta ){
-      $_SESSION["usuario_logado"] = true;
-      header("Location: ./../tela-principal.php");
-    } else{
-        echo 'login errado';
-    }   
- }
+  $login = $_POST['email'];
+  $senha = $_POST['senha'];
 
+  $sql_consulta = "SELECT * FROM funcionario WHERE funcionario_email = '$login' AND funcionario_senha = '$senha'";
+  $res = $conn->query($sql_consulta);
+  // $stmt = $conn -> prepare($sql_consulta);
+  // $stmt -> bind_param("ss", $login, $senha );
+  // $stmt -> execute();
+  // $result = $stmt ->get_result();
+
+
+
+  if ($res->num_rows == 1) {
+    $funcionario = $res->fetch_assoc();
+    //especificar dentro da SESSAO o setor de quem logou
+    $_SESSION['setor_logado']= $funcionario['funcionario_setores'];
+    // echo $_SESSION['setor_logado'];
+    header('Location: ../tela-principal.php');
+    // echo "logado";
+  } else {
+    // setcookie("login", $login);
+    header("Location:index.php");
+    echo "erro ou logar";
+  }
+}
 ?>

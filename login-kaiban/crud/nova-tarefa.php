@@ -6,7 +6,7 @@
     <script src="js.js" defer></script>
     <link rel="stylesheet" href="css/style-principal.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Lixeira</title>
+    <title>Nova tarefa</title>
 </head>
 <body>
 <header>
@@ -18,7 +18,6 @@
                     <li><a href="#">Calendário</a></li>
                     <li><a href="#">Lixeira</a></li>
                     <li><a href="#">Novo</a></li>
-                    <li><a href="tela-principal.php">Voltar</a></li>
                 </ul>
             </nav>
         </div>
@@ -33,7 +32,7 @@
                 <input type="text" id="txtBusca" name="procurar" placeholder="Pesquisar.." />
                 <img src="imagens/lupa.png" id="btnBusca" alt="Buscar" />
             </div>
-        
+
             <div class="topicos">
                 <div>
                     <a href="../login-kaiban/tela-principal.php">
@@ -46,15 +45,10 @@
                     </a>
                 </div>
                 <div>
-                    <a href="#">
-                        <p id="lixeira-div">Lixeira</p>
+                    <a href="lixeira.php">
+                        <p>Lixeira</p>
                     </a>
-                </div>
-                <div>
-                    <a href="tela-principal.php">
-                        <p>Voltar</p>
-                    </a>
-                </div>
+</div>
             </div>
         </div>
         <div class="display">
@@ -66,15 +60,17 @@
             </div>
         </div>
         <div class="kanban-block" id="todo">
-            <strong class="fazer">Lixeira</strong>
+            <strong class="fazer">Adicionar nova tarefa</strong>
             <div class="task-button-block">
-                <button id="task-button">Excluir tudo</button>
+                <button id="task-button">Adicionar nova nota</button>
             </div>
             <div class="task" id="task1">
-                <span>Lista das tarefas que foram excluidas</span>
+                <span>Titulo da tarefa: Nessa parte nossos clientes poderam adicionar suas tarefas, conforme a
+                    escolha.</span>
                 <div class="info">
                     <p id="margin">Data: 11/09/2023</p>
-                    </div>
+                    <p id="margin">10:02</p>
+                </div>
             </div>
             <div class="task" id="task2">
                 <span>Task 2</span>

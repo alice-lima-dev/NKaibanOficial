@@ -1,3 +1,25 @@
+<?php
+
+$conn = new mysqli("localhost", "root", "", "bd_kaiban");
+if ($conn->connect_error) {
+    die("Erro de conexão" . $conn->connect_error);
+}
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+    $nome = $_POST['nome'];
+    $setores = $_POST['escolha'];
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
+
+
+    $sql = "INSERT INTO funcionario (funcionario_nome, funcionario_email, funcionario_setores, funcionario_senha) VALUES(?,?,?,?)";
+    $stmt = mysqli_prepare($conn, $sql);
+    $stmt->bind_param("sssi", $nome, $email, $setores, $senha);
+    $stmt->execute();
+}
+$conn->close();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -21,23 +43,22 @@
         <img class="image" src="../imagens/login-rafiki.png">
         </div>
     <div class="form-cadastro">
-        <form class="form">
+        <form class="form" method="POST">
             <h2 id="cadastro-titulo">CADASTRE-SE</h2>
             <label>Usuário:</label>
             <div class="input-nome">
-                <input type="text" id="usuario" placeholder="Nome" required>
+                <input name="nome" type="text" id="usuario" placeholder="Nome" required>
             </div>
             <div id="input-nome">
                 <label id="classes">Setores:</label>
             </div>
             <div class="comum-todos">
-                <select name="Sorcerer" id="vocacao" required>
-                    <option value="placeholder">Selecione um setor </option>
+                <select name="escolha" id="vocacao" required>
+                    <option value="setor">Selecione um setor </option>
                     <option value="biblioteca">Biblioteca</option>
                     <option value="secretaria">Secretaria</option>
-                    <option value="Diretoria">Diretoria</option>]
-                    <option value="professores">Professores</option>
-                    </optgroup>
+                    <option value="diretoria">Diretoria</option>
+                    <option value="professor">Professores</option>
                 </select>
             </div>
             <div id="input-nome">
@@ -52,7 +73,7 @@
             <div id="senha">
                 <input id="senha-cadastro" type="text" name="senha" placeholder="Senha" required>
             </div>
-            <button class="botao-cadastro" onclick="Validar()">Entrar</button>
+            <input type="submit" name="botao" id="botao-cadastro">
             <div id="redefinir">
                 <a href="../login/redefinir.php" class="redefinir-senha">Redefinir Senha?</a>
             </div>
