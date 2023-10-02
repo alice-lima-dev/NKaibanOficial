@@ -1,34 +1,50 @@
 <?php
-if(isset($_GET['id'])){
+include '../crud/conexao.php';
+
+if (isset($_GET['id'])) {
     $id = $_GET['id'];
 
-  $sql = "SELECT * FROM funcionario WHERE id = ?";
-  $stmt = $conexao-> prepare($sql);
-  $stmt->bind_param("i", $id);
-  $stmt->execute();
-  $resultado = $stmt->get_result();
-}
+    // consultar se o animal existe;
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $id_funcionario = $_POST['id_funcionario'];
-        $senha_funcionario = $_POST['senha-cadastro'];
-        $confirma_funcionario= $_POST['senha-cadastro'];
+    $sql = "SELECT * FROM funcionario WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+    $resultado = $stmt->get_result();
 
-        $sql = "UPDATE funcionario SET funcionario_senha= '$senha_funcionario',  WHERE id_paciente = $id_paciente";
-
-        if ($conn->query($sql) === TRUE) {
-            echo "Funcionario atualizado com sucesso";
-        } else {
-            echo "Erro ao atualizar o funcionario " . $conn->error;
-        }
+    if ($resultado->num_rows == 1) {
+        $funcionario = $resultado->fetch_assoc();
     } else {
-        echo "O formulário não foi enviado.";
+        die("funcionario não encontrado.");
     }
+}
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $senha = $_POST["senha"];
+    $id = $_POST['id'];
+    $email = $_POST["email"];
 
-    $conn->close();
-    ?>
+    $sqlconsulta = "SELECT * FROM funcionario WHERE funcionario_email = ?";
+    $stmtconsulta = $conn->prepare($sqlconsulta);
+    $stmtconsulta->bind_param("s", $email);
+    $stmtconsulta->execute();
+    $resultado_consulta = $stmtconsulta->get_result();
+    $res = $resultado_consulta->fetch_assoc();
+
+    // atualizando o pacinte
+    // $sql = "UPDATE funcionario SET funcionario_senha = '$senha' WHERE funcionario_id = '$id' ";
+    $sql = "UPDATE funcionario SET funcionario_senha = ? WHERE funcionario_email = '$res[funcionario_email]'";
+    $stmt_update = $conn->prepare($sql);
+    $stmt_update->bind_param("i", $senha, ); // "si" significa que você está vinculando uma string (senha) e um inteiro (id)
+    $stmt_update->execute();
+    // if ($stmt->execute()) {
+    //     header("location: ../index.php");
+    // }
+}
+$conn->close();
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,34 +60,38 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
-    <div class="Display">
-          <img class="image" src="../imagens/redefinir.png">
-        <div class="form-cadastro">
-            <h2 id="cadastro-titulo">Redefinir Senha</h2>
-            <div id="input-nome">
-                <label id="">Email:</label>
-            </div>
-            <div id="email2">
-                <input id="email-cadastro" type="email" name="email" placeholder="Email" required>
-            </div>
-            <div id="input-nome">
-                <label id="#">Nova senha:</label>
-            </div>
-            <div id="senha">
-                <input id="senha-cadastro" type="text" name="senha" placeholder="Senha" required>
-            </div>
-            <div id="input-nome">
-                <label id="#">Reescreva a senha:</label>
-            </div>
-            <div id="senha">
-                <input id="redefinir-cadastro" type="text" name="senha" placeholder="Senha" required>
-            </div>
-            <button class="botao-cadastro" onclick="Validar()">Entrar</button>
-            <div id="redefinir">
-                <a href="/loginkaiban/index.php" class="redefinir-senha">Voltar ao Login</a>
+    <form action="" method="POST">
+        <div class="Display">
+            <img class="image" src="../imagens/redefinir.png">
+            <div class="form-cadastro">
+                <h2 id="cadastro-titulo">Redefinir Senha</h2>
+                <div id="input-nome">
+                    <label id="">Email:</label>
+                </div>
+                <div id="email2">
+                    <input type="hidden" name="id" valeu="<?php echo $funcionario['id']; ?>">
+                    <input id="email-cadastro" type="email" name="email" placeholder="Email" required>
+                </div>
+                <div id="input-nome">
+                    <label id="#">Nova senha:</label>
+                </div>
+                <div id="senha">
+                    <input id="senha-cadastro" type="text" name="senha" placeholder="Senha" required>
+                </div>
+                <div id="input-nome">
+                    <label id="#">Reescreva a senha:</label>
+                </div>
+                <div id="senha">
+                    <input id="redefinir-cadastro" type="text" name="senha-redefinir" placeholder="Senha" required>
+                </div>
+                <input type="submit" name="button" id="button" placeholder="entrar">
+
+                <div id="redefinir">
+                    <a href="/loginkaiban/index.php" class="redefinir-senha">Voltar ao Login</a>
+                </div>
             </div>
         </div>
-    </div>
+    </form>
 </body>
 
 </html>

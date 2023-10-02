@@ -9,12 +9,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
   $sql_consulta = "SELECT * FROM funcionario WHERE funcionario_email = '$login' AND funcionario_senha = '$senha'";
   $res = $conn->query($sql_consulta);
-  // $stmt = $conn -> prepare($sql_consulta);
-  // $stmt -> bind_param("ss", $login, $senha );
-  // $stmt -> execute();
-  // $result = $stmt ->get_result();
-
-
 
   if ($res->num_rows == 1) {
     $funcionario = $res->fetch_assoc();

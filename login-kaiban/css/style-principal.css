@@ -238,11 +238,21 @@ header{
     width: 10%;
 }
 .formulario-novo{
-    margin-left: 80%;
+    margin-left: 30%;
 }
 #titulo{
-    border: #6641cb solid 3px;
-
+    border: #6641cb solid 1px;
+}
+#vocaco{
+    border: #3F1573 1px solid;
+    border-radius: 3px;
+    background-color: #ffffff;
+    width: 80%;
+    height: 30px;
+    margin-left: 20px;
+}
+.adicionar{
+    margin-left: 15%;
 }
 /* Estilo para telas menores (exemplo de media query) */
 @media screen and (max-width: 768px) {

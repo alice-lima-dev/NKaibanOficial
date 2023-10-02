@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="Pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -65,6 +65,15 @@
             <div class="adicionar">
                 <input type="text" id="titulo" name="titulo" placeholder="Adicione o titulo de sua tarefa">
                 <input type="text" id="titulo" name="conteudo" placeholder="Escreva sua tarefa">
+                <div class="comum-todos">
+                <select name="escolha" id="vocacao" required>
+                    <option value="setor">Selecione um setor </option>
+                    <option value="biblioteca">Biblioteca</option>
+                    <option value="secretaria">Secretaria</option>
+                    <option value="diretoria">Diretoria</option>
+                    <option value="professor">Professores</option>
+                </select>
+            </div>
                 <input type="submit" name="enviar">
             </div>
         </form>
