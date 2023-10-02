@@ -1,6 +1,34 @@
+<?php
+if(isset($_GET['id'])){
+    $id = $_GET['id'];
+
+  $sql = "SELECT * FROM funcionario WHERE id = ?";
+  $stmt = $conexao-> prepare($sql);
+  $stmt->bind_param("i", $id);
+  $stmt->execute();
+  $resultado = $stmt->get_result();
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $id_funcionario = $_POST['id_funcionario'];
+        $senha_funcionario = $_POST['senha-cadastro'];
+        $confirma_funcionario= $_POST['senha-cadastro'];
+
+        $sql = "UPDATE funcionario SET funcionario_senha= '$senha_funcionario',  WHERE id_paciente = $id_paciente";
+
+        if ($conn->query($sql) === TRUE) {
+            echo "Funcionario atualizado com sucesso";
+        } else {
+            echo "Erro ao atualizar o funcionario " . $conn->error;
+        }
+    } else {
+        echo "O formulário não foi enviado.";
+    }
+
+    $conn->close();
+    ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,7 +64,7 @@
                 <label id="#">Reescreva a senha:</label>
             </div>
             <div id="senha">
-                <input id="senha-cadastro" type="text" name="senha" placeholder="Senha" required>
+                <input id="redefinir-cadastro" type="text" name="senha" placeholder="Senha" required>
             </div>
             <button class="botao-cadastro" onclick="Validar()">Entrar</button>
             <div id="redefinir">
