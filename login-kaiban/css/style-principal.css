@@ -237,7 +237,13 @@ header{
 #lixinho{
     width: 10%;
 }
+.formulario-novo{
+    margin-left: 80%;
+}
+#titulo{
+    border: #6641cb solid 3px;
 
+}
 /* Estilo para telas menores (exemplo de media query) */
 @media screen and (max-width: 768px) {
     .navbar .menu {

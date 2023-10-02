@@ -61,20 +61,11 @@
 
             </div>
         </div>
-        <form method="POST" class="formLogin">
-            <div class="inputs">
-                <input type="text" name="titulo" placeholder="Adicione o titulo de sua nota">
-            </div>
-            <div class="inputs">
-                <input type="text" name="assunto" placeholder="Adicione sua nota">
-            </div>
-            <div class="cores">
-                <select name="cores">
-                    <option value="Azul">Azul</option>
-                    <option value="amarelo">Amarelo</option>
-                    <option value="verde">Verde</option>
-                    <option value="rosa">Rosa</option>
-                </select>
+        <form class="formulario-novo " method="POST">
+            <div class="adicionar">
+                <input type="text" id="titulo" name="titulo" placeholder="Adicione o titulo de sua tarefa">
+                <input type="text" id="titulo" name="conteudo" placeholder="Escreva sua tarefa">
+                <input type="submit" name="enviar">
             </div>
         </form>
     </div>
