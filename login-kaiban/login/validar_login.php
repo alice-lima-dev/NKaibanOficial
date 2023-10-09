@@ -13,7 +13,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   if ($res->num_rows == 1) {
     $funcionario = $res->fetch_assoc();
     //especificar dentro da SESSAO o setor de quem logou
-    $_SESSION['setor_logado']= $funcionario['funcionario_setores'];
+    $_SESSION['setor_logado'] = $funcionario['funcionario_setores'];
+
+    $_SESSION['funcionario_id'] = $funcionario['funcionario_id'];
     // echo $_SESSION['setor_logado'];
     header('Location: ../tela-principal.php');
     // echo "logado";

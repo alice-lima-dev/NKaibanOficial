@@ -1,3 +1,7 @@
+<?php
+session_start();
+echo $_SESSION['funcionario_id'];
+?>
 <!DOCTYPE html>
 <html lang="Pt-br">
 
@@ -5,7 +9,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js.js" defer></script>
-    <link rel="stylesheet" href="./css/style-principal.css">
+    <!-- <link rel="stylesheet" href="./css/style-principal.css"> -->
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Nova tarefa</title>
 </head>
@@ -57,24 +62,26 @@
             <div class="kanban-heading">
                 <strong class="kanban-heading-text"></strong>
             </div>
-            <div class="bloco">
-
-            </div>
         </div>
-        <form class="formulario-novo " method="POST">
+        <h1>Adicionar nova tarefa</h1>
+        <form class="formulario-novo " action="./crud/tarefa.php" method="POST">
             <div class="adicionar">
-                <input type="text" id="titulo" name="titulo" placeholder="Adicione o titulo de sua tarefa">
-                <input type="text" id="titulo" name="conteudo" placeholder="Escreva sua tarefa">
+                <div id="display">
+                    <input type="text" id="umtitulo" name="titulo" placeholder="Adicione o titulo de sua tarefa">
+                </div>
+                <div id="display">
+                    <input type="text" id="titulo" name="assunto" placeholder="Escreva sua tarefa">
+                </div>
                 <div class="comum-todos">
-                <select name="escolha" id="vocacao" required>
-                    <option value="setor">Selecione um setor </option>
-                    <option value="biblioteca">Biblioteca</option>
-                    <option value="secretaria">Secretaria</option>
-                    <option value="diretoria">Diretoria</option>
-                    <option value="professor">Professores</option>
-                </select>
-            </div>
-                <input type="submit" name="enviar">
+                    <select name="tarefa_cor" id="vocacao" required>
+                        <option value="setor">Selecione uma cor</option>
+                        <option value="verde">Verde</option>
+                        <option value="amarelo">Amarelo</option>
+                        <option value="rosa">Rosa</option>
+                        <option value="azul">Azul</option>
+                    </select>
+                </div>
+                <input type="submit" id="botao" name="Salvar">
             </div>
         </form>
     </div>

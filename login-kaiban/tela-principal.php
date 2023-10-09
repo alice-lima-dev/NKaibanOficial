@@ -1,5 +1,15 @@
+<?php
+session_start();
+include './crud/conexao.php';
+
+$id_funcionario = $_SESSION['funcionario_id'];
+
+$sql = "SELECT * FROM tarefa_blocodenotas WHERE fk_funcionario_id = '$id_funcionario' ORDER BY tarefa_titulo";
+$resultado = $conn->query($sql);
+
+?>
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -64,38 +74,34 @@
                 <strong class="kanban-heading-text"></strong>
             </div>
             <div class="bloco">
-
             </div>
         </div>
         <div class="kanban-block" id="todo">
             <strong class="fazer">Bloco de notas</strong>
             <div class="task-button-block">
-                <button id="task-button">Adicionar nova nota</button>
+                <a href="nova-tarefa.php"><button id="task-button">Adicionar nova nota</button></a>
             </div>
             <div class="task" id="task1">
-                <span>Titulo da tarefa: Nessa parte nossos clientes poderam adicionar suas tarefas, conforme a
-                    escolha.</span>
-                <div class="info">
-                    <p id="margin">Data: 11/09/2023</p>
-                    <p id="margin">10:02</p>
-                    <a href="lixeira.php">
-                    <img id="lixinho" src="imagens/lixeira-de-reciclagem.png"></a>
-                </div>
-            </div>
-            <div class="task" id="task2">
-                <span>Task 2</span>
-            </div>
-            <div class="task" id="task3">
-                <span>Task 3</span>
-            </div>
-            <div class="task" id="task4">
-                <span>Task 4</span>
-            </div>
-            <div class="task" id="task5">
-                <span>Task 5</span>
-            </div>
-            <div class="task" id="task6">
-                <span>Task 6</span>
+                <?php
+                if ($resultado -> num_rows > 0) {
+                    while ($row = $resultado-> fetch_assoc()) {
+                        echo "<tr>";
+                        echo "<div class='bordar'>";
+                        echo "<p class='teste'>";
+                        echo "<span id='titulo_tarefa'>" . $row['tarefa_titulo'] ." </span><br>";
+                        echo "<span>" . $row['tarefa_assunto'] ." </span>";
+                        echo "<div class='info'>";
+                        echo "<p id='margin'>". $row['data_tarefa'] . "</p>";
+                        echo "<a href='lixeira.php'>";
+                        echo "<img id='lixinho' src='imagens/lixeira-de-reciclagem.png'></a>";
+                        echo "</p>";
+                        echo "</div></div>";
+                        echo "</tr>";
+                    }
+                } else {
+                    echo "Nenhuma tarefa atribuida";
+                }
+                ?>
             </div>
         </div>
     </div>

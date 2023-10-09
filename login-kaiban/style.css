@@ -92,7 +92,7 @@ a {
 }
 
 .info {
-    margin-left: 50%;
+    margin-left: 80%;
     display: flex;
 }
 
@@ -233,36 +233,53 @@ header{
     width: 35px;
 }
 #lixinho{
-    width: 45%;
+    width: 10%;
 }
 .formulario-novo{
-    margin-left: 20%;
+    margin-left: 35%;
+    margin-top: 15px;
+    border: solid 2px black;
+    border-radius: 15px;
+    width: 40%;
+    height: 40%;
 }
-#titulo_tarefa{
-    padding: 15px;
+#titulo{
+    border: #6641cb solid 1px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    width: 80%;
 }
-.play{
-    display: block;
+#umtitulo{
+   margin-top: 5px;
+   border: #6641cb solid 1px;
+   padding: 10px;
+   border-radius: 5px;
+   width: 80%;
 }
-#vocaco{
+#vocacao{
     border: #3F1573 1px solid;
     border-radius: 3px;
     background-color: #ffffff;
     width: 80%;
     height: 30px;
-    margin-left: 20px;
+    margin-top: 15px;
     padding: 15px;
+}
+h1{
+    color:#3F1573;
+   margin-left: 43%;
+}
+#botao{
+    width: 80%;
+    margin-top: 15px;
+    height: 10%;
 }
 .adicionar{
     margin-left: 15%;
-}
-.bordar{
-    border: #333 1px;
-    
-}
-.teste{
-    line-height: 20px;
-    color: #35DB66;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    display: block;
 }
 
 /* Estilo para telas menores (exemplo de media query) */
