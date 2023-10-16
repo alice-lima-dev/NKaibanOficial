@@ -2,15 +2,17 @@
 include './crud/conexao.php';
 
 if (isset($_GET['id'])) {
-    $id_notas= $_GET['id'];
+    $id_paciente = $_GET['id'];
 
-    $sql = "DELETE FROM tarefa_blocodenotas WHERE fk_funcionario_id = '$id_funcionario'";
+    $sql = "DELETE FROM tarefa_blocodenotas WHERE tarefa_id = $id_paciente";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Nota apagada com sucesso!";
+        echo "Excluido!";
+        header("Location: tela-principal.php");
     } else {
-        echo "Erro ao apagar essa nota: " . $conn->error;
+        echo "Erro " . $conn->error;
     }
+} else {
+    echo "ID não especificado.";
 }
-$conn->close();
 ?>

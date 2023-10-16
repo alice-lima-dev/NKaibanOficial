@@ -1,12 +1,11 @@
 <?php
 session_start();
-
-$conn = new mysqli("localhost", "root", "", "bd_kaiban");
-if ($conn->connect_error) {
-    die("Erro de conexão" . $conn->connect_error);
-}
-
-echo $_SESSION['funcionario_id'];
+echo  $_SESSION['funcionario_id'];
+  include 'conexao.php';
+// $conn = new mysqli("localhost", "root", "", "bd_kaiban");
+// if ($conn->connect_error) {
+//     die("Erro de conexão" . $conn->connect_error);
+// }
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     
@@ -20,8 +19,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($conn->query($sql) === TRUE) {
         echo "Notas inserida com sucesso!";
         header("./>tela-principal.php");
+        header("location: http://localhost/NKaibanOficial/login-kaiban/tela-principal.php");
     } else {
         echo "Erro ao inserir notas: " . $conn->error;
     }
+
 }
 ?>

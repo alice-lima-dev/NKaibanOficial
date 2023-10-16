@@ -16,7 +16,7 @@ $resultado = $conn->query($sql);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="kaiban.jpg" type="image/png">
     <script src="js.js" defer></script>
-    <link rel="stylesheet" href="css/style-principal.css">
+    <link rel="stylesheet" href="./css/style-principal.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Tela principal</title>
 </head>
@@ -38,8 +38,10 @@ $resultado = $conn->query($sql);
     <div class="container">
         <div class="barra-lateral">
             <div id="usuario">
-                <img id="img-cadastro" src="imagens/user-interface.png" alt="Usuário">
-                <p id="nome">Nome do usuário</p>
+                <a href="index.php">
+                    <img id="img-cadastro" src="imagens/user-interface.png" alt="Usuário">
+                    <p id="nome">Nome do usuário</p>
+                </a>
             </div>
             <div id="div-busca">
                 <input type="text" id="txtBusca" name="procurar" placeholder="Pesquisar.." />
@@ -51,23 +53,7 @@ $resultado = $conn->query($sql);
                     <img id="img-novo" src="imagens/mais.png" alt="Novo">
                 </a>
             </div>
-            <div class="topicos">
-                <div>
-                    <a href="../login-kaiban/tela-principal.php">
-                        <p>Bloco de notas</p>
-                    </a>
-                </div>
-                <div>
-                    <a href="../kaibancalendario/calendario.php">
-                        <p>Calendário</p>
-                    </a>
-                </div>
-                <div>
-                    <a href="lixeira.php">
-                        <p>Lixeira</p>
-                    </a>
-                </div>
-            </div>
+
         </div>
         <div class="display">
             <div class="kanban-heading">
@@ -83,20 +69,20 @@ $resultado = $conn->query($sql);
             </div>
             <div class="task" id="task1">
                 <?php
-                if ($resultado -> num_rows > 0) {
-                    while ($row = $resultado-> fetch_assoc()) {
+                if ($resultado->num_rows > 0) {
+                    while ($row = $resultado->fetch_assoc()) {
                         echo "<tr>";
-                        echo "<div class='bordar'>";
+                        echo "<div class='flex'>";
                         echo "<p class='teste'>";
-                        echo "<span id='titulo_tarefa'>" . $row['tarefa_titulo'] ." </span><br>";
-                        echo "<span>" . $row['tarefa_assunto'] ." </span>";
+                        echo "<span id='titulo_tarefa'>" . $row['tarefa_titulo'] . " </span><br>";
+                        echo "<span>" . $row['tarefa_assunto'] . " </span>";
                         echo "<div class='info'>";
-                        echo "<p id='margin'>". $row['data_tarefa'] . "</p>";
-                        echo "<a href='lixeira.php'>";
-                        echo "<img id='lixinho' src='imagens/lixeira-de-reciclagem.png'></a>";
-                        echo "</p>";
+                        echo "<p id='margin'>" . $row['data_tarefa'] . "</p>";
+                        echo "<a class='hu2' href='lixeira.php?id=" . $row["tarefa_id"] . "'>Excluir</a>";
+                        echo "<a class= 'hu' href='editar-tarefa.php?id=" . $row["tarefa_id"] . "'>Editar</a>";
                         echo "</div></div>";
                         echo "</tr>";
+                        echo "<hr class='linha'>";
                     }
                 } else {
                     echo "Nenhuma tarefa atribuida";

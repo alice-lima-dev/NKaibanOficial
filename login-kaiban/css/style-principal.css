@@ -97,10 +97,9 @@ a {
 }
 
 #margin {
-    margin-left: 5px;
+    margin-left: 20px;
     opacity: 0.5;
-    margin-right: 5px;
-    margin-top: 10px;
+    margin-top: 20px;
     white-space: nowrap;
 }
 
@@ -232,14 +231,11 @@ header{
 .nkaiban{
     width: 35px;
 }
-#lixinho{
-    width: 45%;
-}
 .formulario-novo{
     margin-left: 20%;
 }
 #titulo_tarefa{
-    padding: 15px;
+    padding: 2px;
 }
 .play{
     display: block;
@@ -256,15 +252,26 @@ header{
 .adicionar{
     margin-left: 15%;
 }
-.bordar{
-    border: #333 1px;
-    
+.lixinho{
+    width: 15%;
+    margin-top: 10px;
+    margin-left: 10px;
 }
-.teste{
-    line-height: 20px;
-    color: #35DB66;
+.flex{
+    display: flex;
 }
-
+.hu{
+    margin-top: 5%;
+    margin-left: 5px;
+    margin-right: 10%;
+}
+.hu2{
+    margin-top: 5%;
+    margin-left: 5px;
+}
+span{
+    margin-top: 8px;
+}
 /* Estilo para telas menores (exemplo de media query) */
 @media screen and (max-width: 768px) {
     .navbar .menu {

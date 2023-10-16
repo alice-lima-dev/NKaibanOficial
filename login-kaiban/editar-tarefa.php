@@ -1,9 +1,49 @@
 <?php
-session_start();
-echo $_SESSION['funcionario_id'];
+include("./crud/conexao.php");
+
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+
+    $sql = "SELECT * FROM tarefa_blocodenotas WHERE tarefa_id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+    $resultado = $stmt->get_result();
+
+
+    if ($resultado->num_rows == 1) {
+        $tarefa = $resultado->fetch_assoc();
+
+        $tarefa_titulo = $tarefa['tarefa_titulo'];
+        $assunto_tarefa = $tarefa['tarefa_assunto'];
+    } else {
+        die("Tarefa não encontrada");
+    }
+
+} else {
+    die("ID da tarefa não especificada");
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $id = $_POST['id'];
+    $titulo = $_POST['titulo'];
+    $assunto = $_POST['assunto'];
+
+
+    $sql = "UPDATE tarefa_blocodenotas SET tarefa_titulo = '$titulo', tarefa_assunto = '$assunto' WHERE tarefa_id = $id";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "atualizado com sucesso!";
+        header("Location: tela-principal.php");
+    } else {
+        echo "Erro ao atualizar o paciente: " . $conn->error;
+    }
+} else {
+    echo "O formulário não foi enviado.";
+}
+
+$conn->close();
 ?>
-<!DOCTYPE html>
-<html lang="Pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -54,28 +94,24 @@ echo $_SESSION['funcionario_id'];
             </div>
         </div>
         <h1>Adicionar nova tarefa</h1>
-        <form class="formulario-novo " action="./crud/tarefa.php" method="POST">
+        <form class="formulario-novo " method="POST">
             <div class="adicionar">
+            <input type="hidden" id="umtitulo" name="id" value="<?php echo $id; ?>">
                 <div id="display">
-                    <input type="text" id="umtitulo" name="titulo" placeholder="Adicione o titulo de sua tarefa">
+                    <input type="text" id="umtitulo" name="titulo" value="<?php echo $tarefa_titulo; ?>" placeholder="Adicione o titulo de sua tarefa">
                 </div>
                 <div id="display">
-                    <input type="text" id="titulo" name="assunto" placeholder="Escreva sua tarefa">
+                    <input type="text" id="titulo" name="assunto"
+                        value="<?php echo $assunto_tarefa; ?>" placeholder= "Escreva sua tarefa">
                 </div>
-                <div class="comum-todos">
-                    <select name="tarefa_cor" id="vocacao" required>
-                        <option value="setor">Selecione uma cor</option>
-                        <option value="verde">Verde</option>
-                        <option value="amarelo">Amarelo</option>
-                        <option value="rosa">Rosa</option>
-                        <option value="azul">Azul</option>
-                    </select>
-                </div>
-                <input type="submit" id="botao" name="Salvar">
+                <a href="tela-principal.php">
+                <input type="submit" id="botao" name="Salvar" ></a>
+                
             </div>
         </form>
-    </div>
-    </div>
+</body>
+</div>
+</div>
 </body>
 
 </html>
