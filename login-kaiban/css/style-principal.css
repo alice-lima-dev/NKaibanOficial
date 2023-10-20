@@ -236,6 +236,7 @@ header{
 }
 #titulo_tarefa{
     padding: 2px;
+    margin-bottom: 15px;
 }
 .play{
     display: block;
@@ -269,8 +270,8 @@ header{
     margin-top: 5%;
     margin-left: 5px;
 }
-span{
-    margin-top: 8px;
+#span{
+    margin-top: 20px;
 }
 /* Estilo para telas menores (exemplo de media query) */
 @media screen and (max-width: 768px) {

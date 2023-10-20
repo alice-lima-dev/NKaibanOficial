@@ -4,6 +4,7 @@ include './crud/conexao.php';
 
 $id_funcionario = $_SESSION['funcionario_id'];
 
+
 $sql = "SELECT * FROM tarefa_blocodenotas WHERE fk_funcionario_id = '$id_funcionario' ORDER BY tarefa_titulo";
 $resultado = $conn->query($sql);
 
@@ -40,7 +41,9 @@ $resultado = $conn->query($sql);
             <div id="usuario">
                 <a href="index.php">
                     <img id="img-cadastro" src="imagens/user-interface.png" alt="Usuário">
-                    <p id="nome">Nome do usuário</p>
+                    <?php
+                    echo"$_SESSION[nome] = $funcionario[funcionario_nome];";
+                    ?>
                 </a>
             </div>
             <div id="div-busca">
@@ -52,6 +55,13 @@ $resultado = $conn->query($sql);
                     <h2 id="novo">Novo</h2>
                     <img id="img-novo" src="imagens/mais.png" alt="Novo">
                 </a>
+            </div>
+            <div class="topicos">
+                <div>
+                    <a href="calendario/calendario.php">
+                        <p>Calendário</p>
+                    </a>
+                </div>
             </div>
 
         </div>
@@ -75,7 +85,7 @@ $resultado = $conn->query($sql);
                         echo "<div class='flex'>";
                         echo "<p class='teste'>";
                         echo "<span id='titulo_tarefa'>" . $row['tarefa_titulo'] . " </span><br>";
-                        echo "<span>" . $row['tarefa_assunto'] . " </span>";
+                        echo "<span id='span'>" . $row['tarefa_assunto'] . " </span>";
                         echo "<div class='info'>";
                         echo "<p id='margin'>" . $row['data_tarefa'] . "</p>";
                         echo "<a class='hu2' href='lixeira.php?id=" . $row["tarefa_id"] . "'>Excluir</a>";

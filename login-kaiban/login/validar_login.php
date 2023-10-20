@@ -16,6 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $_SESSION['setor_logado'] = $funcionario['funcionario_setores'];
 
     $_SESSION['funcionario_id'] = $funcionario['funcionario_id'];
+
+    $_SESSION['nome'] = $funcionario['funcionario_nome'];
     //  echo $_SESSION['funcionario_id'];
     header('Location: ../tela-principal.php');
     // echo "logado";

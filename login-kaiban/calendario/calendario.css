@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: kirome;
+    src: url(kirome/Kirome.otf);
+}
+
+body {
+    /* font-family: monospace, sans-serif, 'Inter'; */
+    height: 100vh;
+    width: 100vw;
+}
+main {
+    display: flex;
+    height: 100vh;
+}
+
+#sidebar {
+    width: 40%;
+    background-color: #3F1573;
+    padding: 10px;
+    color: white;
+}
+.criartarefas {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    border-radius: 5px;
+    margin: 5px;
+}
+
+#container {
+    width: 100%;
+}
+
+#calendar {
+    margin-left: 10px;
+}

@@ -78,16 +78,10 @@ $conn->close();
                 <div id="senha">
                     <input id="senha-cadastro" type="text" name="senha" placeholder="Senha" required>
                 </div>
-                <div id="input-nome">
-                    <label id="#">Reescreva a senha:</label>
-                </div>
-                <div id="senha">
-                    <input id="redefinir-cadastro" type="text" name="senha-redefinir" placeholder="Senha" required>
-                </div>
                 <input type="submit" name="button" id="button" placeholder="entrar">
 
                 <div id="redefinir">
-                    <a href="/loginkaiban/index.php" class="redefinir-senha">Voltar ao Login</a>
+                    <a href="../index.php" class="redefinir-senha">Voltar ao Login</a>
                 </div>
             </div>
         </div>
