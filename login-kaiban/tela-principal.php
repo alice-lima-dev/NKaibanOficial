@@ -59,7 +59,7 @@ $resultado = $conn->query($sql);
             <div class="topicos">
                 <div>
                     <a href="calendario/calendario.php">
-                        <p>Calendário</p>
+                        <p id="letra">Calendário</p>
                     </a>
                 </div>
             </div>

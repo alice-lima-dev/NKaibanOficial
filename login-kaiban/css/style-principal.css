@@ -30,7 +30,7 @@ body {
 
 #div-busca {
     display: flex;
-    background-color: #a091de;
+    background-color: #ffffff;
     border: solid 1px;
     border-radius: 15px;
     /* width: 250px; */
@@ -55,7 +55,9 @@ body {
 }
 
 #div-novo {
-    background-color: #35DB66;
+    background-color: #ffffff;
+    border: solid 1px;
+    border-radius: 15px;
     width: 80%;
     display: flex;
     margin-top: 40px;
@@ -151,8 +153,19 @@ a {
 }
 
 .topicos {
-    padding: 23%;
+    padding: 20px;
+    background-color: #ffffff;
+    border: solid 1px;
+    border-radius: 15px;
+    margin-top: 40px;
+    margin-left: 25px;
+    width: 80%;
+    height: 5%;
 }
+#letra{
+    margin-left: 35px;
+}
+
 
 /* Tornando imagens responsivas */
 img {
