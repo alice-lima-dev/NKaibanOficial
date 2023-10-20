@@ -30,7 +30,7 @@ body {
 
 #div-busca {
     display: flex;
-    background-color: #a091de;
+    background-color: white;
     border: solid 1px;
     border-radius: 15px;
     /* width: 250px; */
@@ -55,7 +55,7 @@ body {
 }
 
 #div-novo {
-    background-color: #35DB66;
+    background-color: #ffffff;
     width: 80%;
     display: flex;
     margin-top: 40px;
@@ -162,7 +162,6 @@ img {
 
 .navbar {
     background-color: #6641cb;
-    ;
     padding: 10px 0;
 }
 
@@ -201,11 +200,11 @@ img {
 
 #usuario {
     display: flex;
-    margin-top: 15px;
+    margin-top: 35px;
 }
 
 #nome {
-    margin-top: 5%;
+    margin-top: 10%;
     margin-left: 5%;
 }
 
@@ -237,6 +236,10 @@ header{
 #titulo_tarefa{
     padding: 2px;
     margin-bottom: 15px;
+}
+.nome{
+    margin-left: 5px;
+    margin-top: 15px;
 }
 .play{
     display: block;

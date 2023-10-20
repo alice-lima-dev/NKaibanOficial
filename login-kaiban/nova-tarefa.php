@@ -33,7 +33,9 @@ echo $_SESSION['funcionario_id'];
         <div class="barra-lateral">
             <div id="usuario">
                 <img id="img-cadastro" src="imagens/user-interface.png" alt="Usuário">
-                <p id="nome">Nome do usuário</p>
+                <?php
+                    echo '<p class="nome">'.$_SESSION['nome'].'</p>';
+                    ?>
             </div>
             <div id="div-busca">
                 <input type="text" id="txtBusca" name="procurar" placeholder="Pesquisar.." />

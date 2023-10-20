@@ -42,7 +42,7 @@ $resultado = $conn->query($sql);
                 <a href="index.php">
                     <img id="img-cadastro" src="imagens/user-interface.png" alt="Usuário">
                     <?php
-                    echo"$_SESSION[nome] = $funcionario[funcionario_nome];";
+                    echo '<p class="nome">'.$_SESSION['nome'].'</p>';
                     ?>
                 </a>
             </div>
@@ -101,6 +101,9 @@ $resultado = $conn->query($sql);
             </div>
         </div>
     </div>
+    <footer>
+        <p></p>
+    </footer>
 </body>
 
 </html>
