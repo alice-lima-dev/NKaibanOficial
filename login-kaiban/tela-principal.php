@@ -2,12 +2,17 @@
 session_start();
 include './crud/conexao.php';
 
-$id_funcionario = $_SESSION['funcionario_id'];
+// Verifique se a sessão de usuário está ativa (ou seja, se o usuário está logado)
+if (!isset($_SESSION['funcionario_id'])) {
+    // Redireciona para a página de login
+    header('Location: index.php');
+    exit; // Certifica-se de que o script não continue a ser executado
+}
 
+$id_funcionario = $_SESSION['funcionario_id'];
 
 $sql = "SELECT * FROM tarefa_blocodenotas WHERE fk_funcionario_id = '$id_funcionario' ORDER BY tarefa_titulo";
 $resultado = $conn->query($sql);
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -35,6 +40,7 @@ $resultado = $conn->query($sql);
                 </ul>
             </nav>
         </div>
+    
     </header>
     <div class="container">
         <div class="barra-lateral">
@@ -42,7 +48,7 @@ $resultado = $conn->query($sql);
                 <a href="index.php">
                     <img id="img-cadastro" src="imagens/user-interface.png" alt="Usuário">
                     <?php
-                    echo"$_SESSION[nome] = $funcionario[funcionario_nome];";
+                    echo'<p class="nome">'. $_SESSION['nome']. ' </p>';
                     ?>
                 </a>
             </div>
@@ -99,6 +105,18 @@ $resultado = $conn->query($sql);
                 }
                 ?>
             </div>
+            <div class="page">
+        <div class="teste">
+            <!-- Conteúdo existente da página -->
+
+            <!-- Botão de Logout -->
+            <?php
+            if (isset($_SESSION['funcionario_id'])) {
+                echo '<a href="logout.php" class="logout-button">Logout</a>';
+            }
+            ?>
+        </div>
+    </div>
         </div>
     </div>
 </body>

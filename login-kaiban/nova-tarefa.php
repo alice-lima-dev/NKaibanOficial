@@ -22,7 +22,7 @@ echo $_SESSION['funcionario_id'];
         <div id="menu">
             <nav class="nav" id="nav">
                 <ul>
-                    <li><a href="#">Calendário</a></li>
+                    <li><a href="calendario.php">Calendário</a></li>
                     <li><a href="#">Lixeira</a></li>
                     <li><a href="#">Novo</a></li>
                 </ul>
