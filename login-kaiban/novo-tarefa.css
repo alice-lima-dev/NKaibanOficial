@@ -205,9 +205,10 @@ img {
     margin-top: 15px;
 }
 
-#nome {
-    margin-top: 5%;
-    margin-left: 5%;
+.nome-teste {
+    margin-top: 10px;
+ margin-left: 15px;
+ font-size: 25px;
 }
 
 a {

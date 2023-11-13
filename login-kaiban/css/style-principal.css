@@ -2,10 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: sans-serif;
+ font-family: sans-serif;
 }
 .barra-lateral {
     background-color: #b897e3;
@@ -172,13 +169,14 @@ img {
     max-width: 100%;
     height: auto;
 }
-
 .navbar {
     background-color: #6641cb;
-    ;
     padding: 10px 0;
 }
-
+#burguer {
+    padding: 20px;
+    display: flex;
+}
 .navbar .container-nav {
     display: flex;
     justify-content: end;
@@ -190,7 +188,6 @@ img {
     right: 5px;
     /* Ajuste o tamanho do logo conforme necessário */
 }
-
 .navbar .menu {
     list-style: none;
     display: flex;
@@ -206,104 +203,268 @@ img {
     color: black;
     font-size: 18px;
 }
+.nkaiban {
+    width: 5%;
+}
 
-#img-cadastro {
-    width: 15%;
-    margin-left: 5%;
+#burguer {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #1d0240;
+}
+
+.nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: block;
+}
+
+.container {
+    display: flex;
+}
+
+.barra-lateral {
+    width: 300px;
+    background-color: #b897e3;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
 }
 
 #usuario {
     display: flex;
-    margin-top: 15px;
 }
 
-#nome {
-    margin-top: 5%;
+#img-cadastro {
+    width: 15%;
+    padding: 15px;
+    margin-left: 20%;
+}
+
+.teste_nome {
+    font-size: 25px;
+}
+
+#txtBusca {
+    float: left;
     margin-left: 5%;
+    background-color: transparent;
+    font-style: italic;
+    font-size: 18px;
+    border: none;
+}
+
+#div-busca {
+    display: flex;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 10%;
+    margin-left: 8px;
+    margin-right: 25px;
+}
+
+#btnBusca {
+    width: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#div-novo {
+    background-color: #ffffff;
+    width: 80%;
+    display: flex;
+    margin-top: 40px;
+    margin-left: 8%;
+    border-radius: 6px;
+}
+
+#href {
+    margin-left: 0px;
+}
+
+#img-novo {
+    width: 30px;
+    margin-left: 90%;
+    margin-top: 35%;
+    height: 30px;
+
 }
 
 a {
-    text-decoration: none!important;
+    text-decoration: none;
     color: black;
+    font-family: sans-serif;
+    text-align: left;
+    display: flex;
+    font-size: 20px;
+    margin-bottom: 25px;
 }
 
-ul {
-    list-style-type: none;
+#novo {
+    color: black;
+    font-family: sans-serif;
+    margin-top: 30px;
+    margin-left: 50%;
+    font-size: 20px;
 }
-
-li {
-    list-style: none;
+.topicos{
+    margin-top: 15%;
+    margin-left: 25%;
+    display: flex;
 }
-
-nav {
-    display: none;
-}
-header{
-    background-color: #6641cb;
-}
-.nkaiban{
-    width: 35px;
-}
-.formulario-novo{
-    margin-left: 20%;
-}
-#titulo_tarefa{
-    padding: 2px;
-    margin-bottom: 15px;
-}
-.play{
-    display: block;
-}
-#vocaco{
-    border: #3F1573 1px solid;
-    border-radius: 3px;
-    background-color: #ffffff;
-    width: 80%;
-    height: 30px;
-    margin-left: 20px;
-    padding: 15px;
-}
-.adicionar{
-    margin-left: 15%;
-}
-.lixinho{
+.calendario{
     width: 15%;
+}
+.topico-texto{
+   display: flex;
+}
+.kanban-block{
+    margin-left: 20%;
+    margin-right: 5%;
+    border-radius: 0.3rem;
+}
+.fazer{
+    font-size: 35px;
+    margin-left: 35%;
+}
+#todo {
+    background-color: #b897e3;
+    width: 60%;
+    margin-left: 25%;
+    margin-top: 5%;
+}
+.task-button-block{
+    background-color: #ffffff;
+    width: 90%;
+    margin-left: 15px;
+    border-radius: 5px;
+    height: 42px;
+    margin-top: 15px;
+}
+#task-button{
+    font-size: 17px;
+    border: none;
     margin-top: 10px;
-    margin-left: 10px;
+    background-color: #ffffff;
+    margin-left: 42%;
+}
+#task1{
+    background-color: white;
+    margin: 1.2rem 0rem 0.2rem 0rem;
+    border: 0.1rem solid black;
+    border-radius: 0.1rem;
+    padding: 0.4rem 0.1rem 0.4rem 1rem;
 }
 .flex{
     display: flex;
 }
-.hu{
-    margin-top: 5%;
-    margin-left: 5px;
-    margin-right: 10%;
+#titulo_tarefa{
+    border: 2px #b897e3 solid;
+    padding: 5px;
+    font-size: 21px;
+}
+#span-assunto{
+    margin-top: 18px;
+    font-size: 20px;
+}
+#margin{
+    opacity: 0.5;
+    margin-left: 200px;
+}
+.info{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 15px;
 }
 .hu2{
-    margin-top: 5%;
-    margin-left: 5px;
+    margin-left: 25px;
+    margin-right: 15px;
 }
-#span{
-    margin-top: 20px;
+
+/* Adicione estas media queries no final do seu arquivo CSS existente */
+
+@media only screen and (max-width: 1200px) {
+    .barra-lateral {
+        width: 200px;
+        max-width: 100%;
+    }
+
+    .kanban-block {
+        margin-left: 0;
+    }
+
 }
-/* Estilo para telas menores (exemplo de media query) */
-@media screen and (max-width: 768px) {
+
+@media only screen and (max-width: 992px) {
+    .barra-lateral {
+        width: 180px;
+    }
+
+    .kanban-block {
+        margin-left: 0;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .barra-lateral {
+        width: 100%;
+        max-width: 100%;
+        position: static;
+        height: auto;
+        display: none; /* Oculta a barra lateral em telas menores */
+    }
+
+    .kanban-block {
+        margin-left: 0;
+        width: 100%;
+    }
+
     .navbar .menu {
         flex-direction: column;
         align-items: center;
         text-align: center;
         gap: 10px;
     }
-    .nkaiban{
+
+    .nkaiban {
         display: none;
     }
+
     .navbar .menu li {
         font-size: 16px;
     }
-    
+
     .menu {
         display: none;
-        /* Esconde o menu em telas menores */
         flex-direction: column;
         background-color: #333;
         position: absolute;
@@ -323,242 +484,47 @@ header{
 
     .menu-icon {
         display: flex;
-        /* Exibe o ícone do hambúrguer em telas menores */
     }
-    .kanban-block {
-        margin-left: 15px;
-    }
+
     #lixinho {
         width: 20%;
         margin-bottom: 0px;
         margin-left: 5px;
     }
+
     #margin {
         margin-right: 5px;
         margin-top: 5px;
         margin-left: 0px;
     }
-    .info{
+
+    .info {
         margin-left: 50%;
         font-size: 15px;
         white-space: nowrap;
         margin-top: 15px;
     }
-    .fazer{
+
+    .fazer {
         margin-left: 33%;
         font-size: 25px;
     }
-    
 }
 
-/* Estilo para telas menores (exemplo de media query) */
-@media screen and (max-width: 768px) {
-    .barra-lateral {
-        width: 100%;
-    }
-
-    /* Adicione estilos específicos para telas menores aqui */
-}
-
-#burguer{
-    display: flex;
-    justify-content: start;
-    text-align: center;
-    padding: 10px;
-    cursor: pointer;
-}
-
-nav {
-    display: none;
-}
-
-header {
-    padding: 20px;
-}
-
-
-@media screen and (max-width: 480px) {
-    #burguer {
-        padding: 20px;
-        display: flex;
-    }
-    .fazer{
-        margin-left: 25%;
-        font-size: 25px;
-    }
-
-    h3 {
-        font-size: 20px;
-    }
-
-    #img-logar{
+@media only screen and (max-width: 576px) {
+    .nkaiban {
         display: none;
     }
 
-    .teste {
-        display: flex;
+    .navbar .menu li {
+        font-size: 14px;
     }
 
-    #logo{
-        width: 30%;
-        margin: auto;
+    .kanban-block {
+        margin-left: 10px;
     }
 
-    .formLogin {
-        margin-left: 6%;
-        margin-right: 6%;
-        max-width: 1000px;
-        margin-top: 10% !important;
+    .info {
+        font-size: 12px;
     }
-
-    h5 {
-        font-size: 18px;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-
-    #logo-corpo {
-        margin-top: 70%;
-        margin-left: 30%;
-        display: none;
-    }
-
-    #bemvindo {
-        margin-left: 28%;
-        font-size: 25px;
-    }
-}
-
-@media screen and (min-width:481px) and (max-width: 700px) {
-    #burguer {
-        padding: 20px;
-        display: flex;
-    }
-
-    .teste {
-        display: flex;
-    }
-
-    h3 {
-        font-size: 23px;
-    }
-
-    #bemvindo {
-        margin-left: 30%;
-        font-size: 25px;
-    }
-
-    .formLogin {
-        margin-left: 6%;
-        margin-right: 6%;
-        max-width: 80vw;
-        height: 85%;
-    }
-
-    #img-logar{
-        display: none;
-    }
-
-    h5 {
-        font-size: 20px;
-        margin-left: 15%;
-        margin-right: 15%;
-    }
-
-    #logo-corpo {
-        margin-top: 68%;
-        margin-left: 35%;
-        width: 35%;
-        display: none;
-    }
-}
-
-@media screen and (min-width:700px) and (max-width: 900px) {
-    #bemvindo {
-        margin-left: 25%;
-        font-size: 24px;
-    }
-    .formLogin{
-        margin-top: 3%;
-        height: 85%;
-        width: 100vw;
-    }
-    h5 {
-        font-size: 17px;
-        margin-left:50%;
-        margin-right: 5%;
-    }
-    #logo-corpo {
-        margin-left: 55%;
-        width: 35%;
-        margin-top: 35%;
-        display: none;
-    }
-
-    #img-logar {
-        display: none;
-    }
-    #nome {
-        margin-top: 5%;
-        margin-left: 8%;
-        
-    }
-    
-}
-@media screen and (min-width:680px) and (max-width: 900px){
-    #nome {
-        margin-left: 5%;
-        font-size: 10px;
-    }
-    #img-cadastro{
-        margin-left: 9%;
-    }
-    #btnBusca{
-        display: none;
-    }
-    #img-novo{
-        display: none;
-    }
-    .info{
-        margin-left: 65%;
-    }
-}
-
-@media screen and (min-width: 900px) and (max-width: 1300px ) {
-    #burguer {
-        display: none;
-    }
-    li{
-        display: none;
-    }
-    nav {
-        display: flex;
-        text-align: center;
-        justify-content: space-between;
-        width: 100%;
-    }
-    #btnBusca{
-        display: none;
-    }
-    ul {
-        display: flex;
-        width: 100%;
-        text-align: center;
-        justify-content: space-evenly;
-    };
-
-    li {
-        display: flex;
-    }
-    #img-novo{
-        display: none;
-    }
-    .info{
-        margin-left: 65%;
-    }
-}
-@media screen and (max-width: 1700px) {
-  #novo{
-    text-align: center;
-  }
 }
