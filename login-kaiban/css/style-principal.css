@@ -4,13 +4,157 @@
     box-sizing: border-box;
  font-family: sans-serif;
 }
+.barra-lateral {
+    background-color: #b897e3;
+    width: 18%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    position: fixed;
 
-header {
-    background-color: #1d0240;
-    color: white;
+}   
+#txtBusca {
+    float: left;
+    background-color: transparent;
+    padding-left: 1px;
+    font-style: italic;
+    font-size: 18px;
+    border: none;
+    height: 32px;
+    width: 258px;
+    margin-left: 5px;
+}
+
+#div-busca {
+    display: flex;
+    background-color: #a091de;
+    border: solid 1px;
+    border-radius: 15px;
+    /* width: 250px; */
+    color: black;
+    margin-top: 36px;
+    margin-left: 8px;
+    margin-right: 25px;
+}
+
+#btnBusca {
+    width: 30px; 
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#novo {
+    color: black;
+    font-family: sans-serif;
     text-align: center;
-    padding: 10px;
-    position: relative;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+#div-novo {
+    background-color: #35DB66;
+    width: 80%;
+    display: flex;
+    margin-top: 40px;
+    margin-left: 8%;
+}
+
+#img-novo {
+    width: 22px;
+    margin-left: 100%;
+    margin-top: 25%;
+    height: 22px;
+
+}
+
+#href {
+    display: flex;
+    margin-left: 35px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+    text-align: left;
+    display: flex;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.info {
+    margin-left: 50%;
+    display: flex;
+}
+
+#margin {
+    margin-left: 20px;
+    opacity: 0.5;
+    margin-top: 20px;
+    white-space: nowrap;
+}
+
+.kanban-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: sans-serif;
+}
+.kanban-heading-text {
+    font-size: 1.8rem;
+    background-color: tomato;
+    border-radius: 0.5rem;
+    margin: 1rem;
+}
+
+.kanban-block {
+    margin-left: 20%;
+    margin-right: 5%;
+    border-radius: 0.3rem;
+}
+
+.fazer {
+    margin-left: 38%;
+    font-size: 35px;
+}
+
+#todo {
+    background-color: #b897e3;
+}
+
+.task {
+    background-color: white;
+    margin: 0.2rem 0rem 0.3rem 0rem;
+    border: 0.1rem solid black;
+    border-radius: 0.2rem;
+    padding: 0.5rem 0.2rem 0.5rem 2rem;
+}
+
+#task-button {
+    margin: 0.2rem 0rem 0.1rem 0rem;
+    background-color: white;
+    border-radius: 0.2rem;
+    width: 100%;
+    border: 0.25rem solid black;
+    padding: 0.5rem 2.7rem;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+}
+
+.topicos {
+    padding: 23%;
+}
+
+/* Tornando imagens responsivas */
+img {
+    max-width: 100%;
+    height: auto;
 }
 .navbar {
     background-color: #6641cb;
