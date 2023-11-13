@@ -29,9 +29,8 @@ $resultado = $conn->query($sql);
         <div id="menu">
             <nav class="nav" id="nav">
                 <ul>
-                    <li><a href="#">Calendário</a></li>
-                    <li><a href="#">Lixeira</a></li>
-                    <li><a href="#">Novo</a></li>
+                    <li><a href="calendario/calendario.php">Calendário</a></li>
+                    <li><a href="nova-tarefa.php">Novo</a></li>
                 </ul>
             </nav>
         </div>
@@ -39,12 +38,10 @@ $resultado = $conn->query($sql);
     <div class="container">
         <div class="barra-lateral">
             <div id="usuario">
-                <a href="index.php">
                     <img id="img-cadastro" src="imagens/user-interface.png" alt="Usuário">
                     <?php
-                    echo '<p class="nome">'.$_SESSION['nome'].'</p>';
+                    echo '<p class="teste_nome">'.$_SESSION['nome'].'</p>';
                     ?>
-                </a>
             </div>
             <div id="div-busca">
                 <input type="text" id="txtBusca" name="procurar" placeholder="Pesquisar.." />
@@ -57,19 +54,11 @@ $resultado = $conn->query($sql);
                 </a>
             </div>
             <div class="topicos">
-                <div>
+                <div class="topico-texto">
                     <a href="calendario/calendario.php">
                         <p>Calendário</p>
                     </a>
                 </div>
-            </div>
-
-        </div>
-        <div class="display">
-            <div class="kanban-heading">
-                <strong class="kanban-heading-text"></strong>
-            </div>
-            <div class="bloco">
             </div>
         </div>
         <div class="kanban-block" id="todo">
@@ -81,20 +70,21 @@ $resultado = $conn->query($sql);
                 <?php
                 if ($resultado->num_rows > 0) {
                     while ($row = $resultado->fetch_assoc()) {
+                        echo "<table border='2'>";
+        echo "<tr><th>Titulo da tarefa</th><th>Assunto da tarefa</th><th>Data e horario</th><th>Excluir</th><th>Editar</th></tr>";
                         echo "<tr>";
-                        echo "<div class='flex'>";
-                        echo "<p class='teste'>";
-                        echo "<span id='titulo_tarefa'>" . $row['tarefa_titulo'] . " </span><br>";
-                        echo "<span id='span'>" . $row['tarefa_assunto'] . " </span>";
-                        echo "<div class='info'>";
-                        echo "<p id='margin'>" . $row['data_tarefa'] . "</p>";
-                        echo "<a class='hu2' href='lixeira.php?id=" . $row["tarefa_id"] . "'>Excluir</a>";
-                        echo "<a class= 'hu' href='editar-tarefa.php?id=" . $row["tarefa_id"] . "'>Editar</a>";
-                        echo "</div></div>";
+                        echo "<td>" . $row["tarefa_titulo"] . "</td>";
+                        echo "<td>" . $row["tarefa_assunto"] . "</td>";
+                        echo "<td>" . $row["data_tarefa"] . "</td>";
+                        
+                        echo "<td><a href='lixeira.php?id=" . $row["tarefa_id"] . "'>Excluir</a></td>";
+            
+                        echo "<td><a href='editar-tarefa.php?id=" . $row["tarefa_id"] . "'>Editar</a></td>";
+            
                         echo "</tr>";
-                        echo "<hr class='linha'>";
                     }
-                } else {
+                    echo "</table>";
+                    } else {
                     echo "Nenhuma tarefa atribuida";
                 }
                 ?>

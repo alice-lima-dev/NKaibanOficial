@@ -8,6 +8,7 @@ if (isset($_GET['id'])) {
 
     if ($conn->query($sql) === TRUE) {
         echo "Excluido!";
+        echo  "<script>alert('deseja exluir');</script>";
         header("Location: tela-principal.php");
     } else {
         echo "Erro " . $conn->error;

@@ -1,6 +1,5 @@
 <?php
 session_start();
-echo $_SESSION['funcionario_id'];
 ?>
 <!DOCTYPE html>
 <html lang="Pt-br">
@@ -10,8 +9,8 @@ echo $_SESSION['funcionario_id'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js.js" defer></script>
     <!-- <link rel="stylesheet" href="./css/style-principal.css"> -->
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="novo-tarefa.css">
+    <link href="https://fonts.googleapis.com/icon #?family=Material+Icons" rel="stylesheet">
     <title>Nova tarefa</title>
 </head>
 
@@ -34,7 +33,7 @@ echo $_SESSION['funcionario_id'];
             <div id="usuario">
                 <img id="img-cadastro" src="imagens/user-interface.png" alt="Usuário">
                 <?php
-                    echo '<p class="nome">'.$_SESSION['nome'].'</p>';
+                    echo '<p class="nome-teste">'.$_SESSION['nome'].'</p>';
                     ?>
             </div>
             <div id="div-busca">
