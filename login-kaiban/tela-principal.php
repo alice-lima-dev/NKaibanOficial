@@ -29,93 +29,56 @@ $resultado = $conn->query($sql);
 
 <body>
     <header>
-        <img class="nkaiban" src="imagens/kaiban.jpg">
-        <i id="burguer" class="material-icons" onclick="clickMenu()">menu</i>
-        <div id="menu">
-            <nav class="nav" id="nav">
-                <ul>
-                    <li><a href="calendario/calendario.php">Calendário</a></li>
-                    <li><a href="nova-tarefa.php">Novo</a></li>
-                </ul>
-            </nav>
-        </div>
-    
-    </header>
-    <div class="container">
-        <div class="barra-lateral">
-            <div id="usuario">
-                    <img id="img-cadastro" src="imagens/user-interface.png" alt="Usuário">
-                    <?php
-<<<<<<< HEAD
-                    echo'<p class="nome">'. $_SESSION['nome']. ' </p>';
-=======
-                    echo '<p class="teste_nome">'.$_SESSION['nome'].'</p>';
->>>>>>> 021872cb3300dfcfbb9ac299a75b9d4bcd06007b
-                    ?>
-            </div>
-            <div id="div-busca">
-                <input type="text" id="txtBusca" name="procurar" placeholder="Pesquisar.." />
-                <img src="imagens/lupa.png" id="btnBusca" alt="Buscar" />
-            </div>
-            <div id="div-novo">
-                <a id="href" href="nova-tarefa.php">
-                    <h2 id="novo">Novo</h2>
-                    <img id="img-novo" src="imagens/mais.png" alt="Novo">
-                </a>
-            </div>
-            <div class="topicos">
-                <div class="topico-texto">
-                    <a href="calendario/calendario.php">
-                        <p id="letra">Calendário</p>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="kanban-block" id="todo">
-            <strong class="fazer">Bloco de notas</strong>
-            <div class="task-button-block">
-                <a href="nova-tarefa.php"><button id="task-button">Adicionar nova nota</button></a>
-            </div>
-            <div class="task" id="task1">
+        <nav>
+            <div class="img_nome">
+                <img id="imagem-usuario" src="imagens/user-interface.png">
+                <?php 
+                    echo '<p class="teste_nome">'. $_SESSION['nome']. '</p>'
+                ?>
                 <?php
-                if ($resultado->num_rows > 0) {
-                    while ($row = $resultado->fetch_assoc()) {
-                        echo "<table border='2'>";
-        echo "<tr><th>Titulo da tarefa</th><th>Assunto da tarefa</th><th>Data e horario</th><th>Excluir</th><th>Editar</th></tr>";
-                        echo "<tr>";
-                        echo "<td>" . $row["tarefa_titulo"] . "</td>";
-                        echo "<td>" . $row["tarefa_assunto"] . "</td>";
-                        echo "<td>" . $row["data_tarefa"] . "</td>";
-                        
-                        echo "<td><a href='lixeira.php?id=" . $row["tarefa_id"] . "'>Excluir</a></td>";
-            
-                        echo "<td><a href='editar-tarefa.php?id=" . $row["tarefa_id"] . "'>Editar</a></td>";
-            
-                        echo "</tr>";
+                    if (isset($_SESSION['funcionario_id'])) {
+                        echo '<a href="logout.php" class="logout-button"><img id="icone_logout" src="imagens/icone_logout.png"></a>';
                     }
-                    echo "</table>";
-                    } else {
-                    echo "Nenhuma tarefa atribuida";
-                }
                 ?>
             </div>
-            <div class="page">
-        <div class="teste">
-            <!-- Conteúdo existente da página -->
-
-            <!-- Botão de Logout -->
+            <ul>
+                <li><a href="nova-tarefa.php">Nova tarefa</a></li>
+                <li><a href="calendario/calendario.php">Calendário</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="kanban-block" id="todo">
+        <strong class="fazer">Tarefas diarias</strong>
+        <div class="task" id="task1">
             <?php
-            if (isset($_SESSION['funcionario_id'])) {
-                echo '<a href="logout.php" class="logout-button">Logout</a>';
+            if ($resultado->num_rows > 0) {
+                echo "<table border='2'>";
+                echo "<tr><th>Titulo da tarefa</th><th>Assunto da tarefa</th><th>Data e horario</th><th>Excluir</th><th>Editar</th></tr>";
+                while ($row = $resultado->fetch_assoc()) {
+                
+                    echo "<tr>";
+                    echo "<td>" . $row["tarefa_titulo"] . "</td>";
+                    echo "<td>" . $row["tarefa_assunto"] . "</td>";
+                    echo "<td>" . $row["data_tarefa"] . "</td>";
+                    
+                    echo "<td><a href='lixeira.php?id=" . $row["tarefa_id"] . "'>Excluir</a></td>";
+        
+                    echo "<td><a href='editar-tarefa.php?id=" . $row["tarefa_id"] . "'>Editar</a></td>";
+        
+                    echo "</tr>";
+                }
+                echo "</table>";
+                } else {
+                echo "Nenhuma tarefa atribuida";
             }
             ?>
         </div>
     </div>
-        </div>
+    <div id="footer">
+        <footer>
+        <p>2023 Sua Empresa. Todos os direitos reservados.</p>
+        </footer>
     </div>
-    <footer>
-        <p></p>
-    </footer>
 </body>
 
 </html>
