@@ -38,11 +38,13 @@ $resultado = $conn->query($sql);
     <div class="container">
         <div class="barra-lateral">
             <div id="usuario">
+                    <img id="img-cadastro" src="imagens/logout.png" alt="Usuário" onclick="location.href='index.php'">
                     <img id="img-cadastro" src="imagens/user-interface.png" alt="Usuário">
                     <?php
                     echo '<p class="teste_nome">'.$_SESSION['nome'].'</p>';
                     ?>
             </div>
+            
             <div id="div-busca">
                 <input type="text" id="txtBusca" name="procurar" placeholder="Pesquisar.." />
                 <img src="imagens/lupa.png" id="btnBusca" alt="Buscar" />
@@ -63,9 +65,6 @@ $resultado = $conn->query($sql);
         </div>
         <div class="kanban-block" id="todo">
             <strong class="fazer">Bloco de notas</strong>
-            <div class="task-button-block">
-                <a href="nova-tarefa.php"><button id="task-button">Adicionar nova nota</button></a>
-            </div>
             <div class="task" id="task1">
                 <?php
                 if ($resultado->num_rows > 0) {

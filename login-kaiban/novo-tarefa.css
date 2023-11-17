@@ -294,6 +294,13 @@ h1{
     .nkaiban{
         display: none;
     }
+    h1{
+        color:#3F1573;
+       margin-left: 43%;
+       font-size: 18px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
     .navbar .menu li {
         font-size: 16px;
     }
