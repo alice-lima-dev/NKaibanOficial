@@ -20,10 +20,6 @@
                 <img id="img-cadastro" src="user-interface.png">
                 <p id="nome">Nome do usuario</p>
             </div>
-            <div id="div-busca">
-                <input type="text" id="txtBusca" placeholder="Pesquisar.." />
-                <img src="lupa.png" id="btnBusca" alt="Buscar" />
-            </div>
             <div id="div-novo">
                 <h2 id="novo">Novo</h2>
                 <img id="img-novo" src="mais.png">
@@ -44,16 +40,7 @@
                         <p>Calendarío</p>
                     </a>
                 </div>
-                <div>
-                    <a href="#">
-                        <p>Lixeira</p>
-                    </a>
-                </div>
 
-                <div>
-                    <a href="#">
-                        <p>Cadernos</p>
-                    </a>
                 </div>
                 <div>
                     <a href="#">
