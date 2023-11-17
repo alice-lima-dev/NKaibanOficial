@@ -1,0 +1,561 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+.barra-lateral {
+    background-color: #b897e3;
+    width: 18%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+
+}   
+#txtBusca {
+    float: left;
+    background-color: transparent;
+    padding-left: 1px;
+    font-style: italic;
+    font-size: 18px;
+    border: none;
+    height: 32px;
+    width: 258px;
+    margin-left: 5px;
+}
+
+#div-busca {
+    display: flex;
+    background-color: #a091de;
+    border: solid 1px;
+    border-radius: 15px;
+    /* width: 250px; */
+    color: black;
+    margin-top: 36px;
+    margin-left: 8px;
+    margin-right: 25px;
+}
+
+#btnBusca {
+    width: 30px; 
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#novo {
+    color: black;
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+#div-novo {
+    background-color: #35DB66;
+    width: 80%;
+    display: flex;
+    margin-top: 40px;
+    margin-left: 8%;
+}
+
+#img-novo {
+    width: 22px;
+    margin-left: 100%;
+    margin-top: 25%;
+    height: 22px;
+
+}
+
+#href {
+    display: flex;
+    margin-left: 35px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+    text-align: left;
+    display: flex;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.info {
+    margin-left: 80%;
+    display: flex;
+}
+
+#margin {
+    margin-left: 5px;
+    opacity: 0.5;
+    margin-right: 5px;
+    margin-top: 10px;
+    white-space: nowrap;
+}
+
+.kanban-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: sans-serif;
+}
+.kanban-heading-text {
+    font-size: 1.8rem;
+    background-color: tomato;
+    border-radius: 0.5rem;
+    margin: 1rem;
+}
+
+.kanban-block {
+    margin-left: 20%;
+    margin-right: 5%;
+    border-radius: 0.3rem;
+}
+
+.fazer {
+    margin-left: 38%;
+    font-size: 35px;
+}
+
+#todo {
+    background-color: #b897e3;
+}
+
+.task {
+    background-color: white;
+    margin: 0.2rem 0rem 0.3rem 0rem;
+    border: 0.1rem solid black;
+    border-radius: 0.2rem;
+    padding: 0.5rem 0.2rem 0.5rem 2rem;
+}
+
+#task-button {
+    margin: 0.2rem 0rem 0.1rem 0rem;
+    background-color: white;
+    border-radius: 0.2rem;
+    width: 100%;
+    border: 0.25rem solid black;
+    padding: 0.5rem 2.7rem;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+}
+
+.topicos {
+    padding: 23%;
+}
+
+/* Tornando imagens responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.navbar {
+    background-color: #6641cb;
+    ;
+    padding: 10px 0;
+}
+
+.navbar .container-nav {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.navbar .logo img {
+    width: 70px;
+    right: 5px;
+    /* Ajuste o tamanho do logo conforme necessário */
+}
+
+.navbar .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .menu li {
+    font-family: sans-serif;
+}
+
+.navbar .menu li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+#img-cadastro {
+    width: 15%;
+    margin-left: 5%;
+}
+
+#usuario {
+    display: flex;
+    margin-top: 15px;
+}
+
+.nome-teste {
+    margin-top: 10px;
+ margin-left: 15px;
+ font-size: 25px;
+}
+
+a {
+    text-decoration: none!important;
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    list-style: none;
+}
+
+nav {
+    display: none;
+}
+header{
+    background-color: #6641cb;
+}
+.nkaiban{
+    width: 35px;
+}
+#lixinho{
+    width: 10%;
+}
+.formulario-novo{
+    margin-left: 35%;
+    margin-top: 15px;
+    border: solid 2px black;
+    border-radius: 15px;
+    width: 40%;
+    height: 40%;
+}
+#titulo{
+    border: #6641cb solid 1px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    width: 80%;
+}
+#umtitulo{
+   margin-top: 5px;
+   border: #6641cb solid 1px;
+   padding: 10px;
+   border-radius: 5px;
+   width: 80%;
+}
+#vocacao{
+    border: #3F1573 1px solid;
+    border-radius: 3px;
+    background-color: #ffffff;
+    width: 80%;
+    height: 30px;
+    margin-top: 15px;
+    padding: 15px;
+}
+h1{
+    color:#3F1573;
+   margin-left: 43%;
+}
+#botao{
+    width: 80%;
+    margin-top: 15px;
+    height: 10%;
+}
+.adicionar{
+    margin-left: 15%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    display: block;
+}
+
+/* Estilo para telas menores (exemplo de media query) */
+@media screen and (max-width: 768px) {
+    .navbar .menu {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+    .nkaiban{
+        display: none;
+    }
+    .navbar .menu li {
+        font-size: 16px;
+    }
+    
+    .menu {
+        display: none;
+        /* Esconde o menu em telas menores */
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 30px;
+        left: 15px;
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .barra-lateral {
+        display: none;
+    }
+
+    .menu-icon {
+        display: flex;
+        /* Exibe o ícone do hambúrguer em telas menores */
+    }
+    .kanban-block {
+        margin-left: 15px;
+    }
+    #lixinho {
+        width: 20%;
+        margin-bottom: 0px;
+        margin-left: 5px;
+    }
+    #margin {
+        margin-right: 5px;
+        margin-top: 5px;
+        margin-left: 0px;
+    }
+    .info{
+        margin-left: 50%;
+        font-size: 15px;
+        white-space: nowrap;
+        margin-top: 15px;
+    }
+    .fazer{
+        margin-left: 33%;
+        font-size: 25px;
+    }
+    
+}
+
+/* Estilo para telas menores (exemplo de media query) */
+@media screen and (max-width: 768px) {
+    .barra-lateral {
+        width: 100%;
+    }
+
+    /* Adicione estilos específicos para telas menores aqui */
+}
+
+#burguer{
+    display: flex;
+    justify-content: start;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+nav {
+    display: none;
+}
+
+header {
+    padding: 20px;
+}
+
+
+@media screen and (max-width: 480px) {
+    #burguer {
+        padding: 20px;
+        display: flex;
+    }
+    .fazer{
+        margin-left: 25%;
+        font-size: 25px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    #img-logar{
+        display: none;
+    }
+
+    .teste {
+        display: flex;
+    }
+
+    #logo{
+        width: 30%;
+        margin: auto;
+    }
+
+    .formLogin {
+        margin-left: 6%;
+        margin-right: 6%;
+        max-width: 1000px;
+        margin-top: 10% !important;
+    }
+
+    h5 {
+        font-size: 18px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    #logo-corpo {
+        margin-top: 70%;
+        margin-left: 30%;
+        display: none;
+    }
+
+    #bemvindo {
+        margin-left: 28%;
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-width:481px) and (max-width: 700px) {
+    #burguer {
+        padding: 20px;
+        display: flex;
+    }
+
+    .teste {
+        display: flex;
+    }
+
+    h3 {
+        font-size: 23px;
+    }
+
+    #bemvindo {
+        margin-left: 30%;
+        font-size: 25px;
+    }
+
+    .formLogin {
+        margin-left: 6%;
+        margin-right: 6%;
+        max-width: 80vw;
+        height: 85%;
+    }
+
+    #img-logar{
+        display: none;
+    }
+
+    h5 {
+        font-size: 20px;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    #logo-corpo {
+        margin-top: 68%;
+        margin-left: 35%;
+        width: 35%;
+        display: none;
+    }
+}
+
+@media screen and (min-width:700px) and (max-width: 900px) {
+    #bemvindo {
+        margin-left: 25%;
+        font-size: 24px;
+    }
+    .formLogin{
+        margin-top: 3%;
+        height: 85%;
+        width: 100vw;
+    }
+    h5 {
+        font-size: 17px;
+        margin-left:50%;
+        margin-right: 5%;
+    }
+    #logo-corpo {
+        margin-left: 55%;
+        width: 35%;
+        margin-top: 35%;
+        display: none;
+    }
+
+    #img-logar {
+        display: none;
+    }
+    #nome {
+        margin-top: 5%;
+        margin-left: 8%;
+        
+    }
+    
+}
+@media screen and (min-width:680px) and (max-width: 900px){
+    #nome {
+        margin-left: 5%;
+        font-size: 10px;
+    }
+    #img-cadastro{
+        margin-left: 9%;
+    }
+    #btnBusca{
+        display: none;
+    }
+    #img-novo{
+        display: none;
+    }
+    .info{
+        margin-left: 65%;
+    }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1300px ) {
+    #burguer {
+        display: none;
+    }
+    li{
+        display: none;
+    }
+    nav {
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    #btnBusca{
+        display: none;
+    }
+    ul {
+        display: flex;
+        width: 100%;
+        text-align: center;
+        justify-content: space-evenly;
+    };
+
+    li {
+        display: flex;
+    }
+    #img-novo{
+        display: none;
+    }
+    .info{
+        margin-left: 65%;
+    }
+}
+@media screen and (max-width: 1700px) {
+  #novo{
+    text-align: center;
+  }
+}
