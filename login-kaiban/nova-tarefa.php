@@ -16,7 +16,7 @@ session_start();
 
 <body>
     <header>
-        <img class="nkaiban" src="imagens/kaiban.jpg">
+        <img class="nkaiban" src="imagens/kaiban.jpeg">
         <i id="burguer" class="material-icons" onclick="clickMenu()">menu</i>
         <div id="menu">
             <nav class="nav" id="nav">
