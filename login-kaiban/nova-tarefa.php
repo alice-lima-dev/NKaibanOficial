@@ -63,16 +63,7 @@ session_start();
                 <div id="display">
                     <input type="text" id="titulo" name="assunto" placeholder="Escreva sua tarefa">
                 </div>
-                <!-- <div class="comum-todos">
-                    <select name="tarefa_cor" id="vocacao" required>
-                        <option value="setor">Selecione uma cor</option>
-                        <option value="verde">Verde</option>
-                        <option value="amarelo">Amarelo</option>
-                        <option value="rosa">Rosa</option>
-                        <option value="azul">Azul</option>
-                    </select>
-                </div> -->
-                <input type="submit" id="botao" name="Salvar">
+                    <input type="submit" id="botao" name="Salvar">
             </div>
         </form>
     </div>

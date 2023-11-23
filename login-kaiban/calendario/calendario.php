@@ -1,12 +1,7 @@
 <?php 
 session_start();
-<<<<<<< HEAD
-// echo  $_SESSION['funcionario_id'];
-  include '../crud/conexao.php';
-=======
 echo  $_SESSION['funcionario_id'];
   include 'conexao.php';
->>>>>>> a9244b6e47e0e25fb2bc2426e139ed5ffae0b4b5
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     

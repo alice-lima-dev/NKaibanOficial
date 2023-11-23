@@ -28,58 +28,14 @@ $resultado = $conn->query($sql);
 </head>
 
 <body>
+
     <header>
-<<<<<<< HEAD
-        <img class="nkaiban" src="imagens/kaiban.jpg">
-        <i id="burguer" class="material-icons" onclick="clickMenu()">menu</i>
-        <div id="menu">
-            <nav class="nav" id="nav">
-                <ul>
-                    <li><a href="calendario/calendario.php">Calendário</a></li>
-                    <li><a href="nova-tarefa.php">Novo</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <div class="container">
-        <div class="barra-lateral">
-            <div id="usuario">
-                    <img id="img-cadastro" src="imagens/logout.png" alt="Usuário" onclick="location.href='index.php'">
-                    <img id="img-cadastro" src="imagens/user-interface.png" alt="Usuário">
-                    <?php
-                    echo '<p class="teste_nome">'.$_SESSION['nome'].'</p>';
-                    ?>
-            </div>
-            
-            <div id="div-busca">
-                <input type="text" id="txtBusca" name="procurar" placeholder="Pesquisar.." />
-                <img src="imagens/lupa.png" id="btnBusca" alt="Buscar" />
-            </div>
-            <div id="div-novo">
-                <a id="href" href="nova-tarefa.php">
-                    <h2 id="novo">Novo</h2>
-                    <img id="img-novo" src="imagens/mais.png" alt="Novo">
-                </a>
-            </div>
-            <div class="topicos">
-                <div class="topico-texto">
-                    <a href="calendario/calendario.php">
-                        <p id="letra">Calendário</p>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="kanban-block" id="todo">
-            <strong class="fazer">Bloco de notas</strong>
-            <div class="task" id="task1">
-=======
         <nav>
             <div class="img_nome">
                 <img id="imagem-usuario" src="imagens/user-interface.png">
                 <?php 
                     echo '<p class="teste_nome">'. $_SESSION['nome']. '</p>'
                 ?>
->>>>>>> a9244b6e47e0e25fb2bc2426e139ed5ffae0b4b5
                 <?php
                     if (isset($_SESSION['funcionario_id'])) {
                         echo '<a href="logout.php" class="logout-button"><img id="icone_logout" src="imagens/icone_logout.png"></a>';
@@ -104,12 +60,9 @@ $resultado = $conn->query($sql);
                     echo "<tr>";
                     echo "<td>" . $row["tarefa_titulo"] . "</td>";
                     echo "<td>" . $row["tarefa_assunto"] . "</td>";
-                    echo "<td>" . $row["data_tarefa"] . "</td>";
-                    
-                    echo "<td><a href='lixeira.php?id=" . $row["tarefa_id"] . "'>Excluir</a></td>";
-        
-                    echo "<td><a href='editar-tarefa.php?id=" . $row["tarefa_id"] . "'>Editar</a></td>";
-        
+                    echo "<td id='dia'>" . $row["data_tarefa"] . "</td>";
+                    echo "<td><button id='confirmButton'>Excluir</button></td>";     
+                    echo "<td><class='editar'>Editar</a></td>";
                     echo "</tr>";
                 }
                 echo "</table>";
@@ -119,6 +72,8 @@ $resultado = $conn->query($sql);
             ?>
         </div>
     </div>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script src="script.js"></script>
     <div id="footer">
         <footer>
         <p>2023 Sua Empresa. Todos os direitos reservados.</p>

@@ -62,19 +62,6 @@ a {
     margin-left: 38%;
     font-size: 35px;
 }
-
-#todo {
-    background-color: #b897e3;
-}
-
-/* .task {
-    background-color: white;
-    margin: 0.0rem 0rem 0.3rem 0rem;
-    border: 0.1rem solid black;
-    border-radius: 0.2rem;
-    padding: 0.5rem 0.2rem 0.5rem 2rem;
-} */
-
 #task-button {
     margin: 0.2rem 0rem 0.1rem 0rem;
     background-color: white;
@@ -100,8 +87,6 @@ nav {
     background-color: #b897e3;
     overflow: hidden;
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -112,6 +97,7 @@ nav ul {
     margin: 0;
     padding: 0;
     text-align: center;
+    margin-top: 15px;
 }
 
 nav li {
@@ -161,6 +147,7 @@ nav a:hover {
 
 .teste_nome {
     font-size: 25px;
+    margin-left: 15px;
 }
 
 #txtBusca {
@@ -238,35 +225,17 @@ nav a:hover {
 #todo {
     background-color: #b897e3;
     width: 60%;
-    margin-left: 25%;
+    margin-left: 20%;
     margin-top: 5%;
 }
-
-/* .task-button-block {
-    background-color: #ffffff;
-    width: 90%;
-    margin-left: 15px;
-    border-radius: 5px;
-    height: 42px;
-    margin-top: 15px;
-} */
-
-/* #task-button {
-    font-size: 17px;
-    border: none;
-    margin-top: 10px;
-    background-color: #ffffff;
-    margin-left: 42%;
-} */
-
 .logout-button {
     margin: 0;
     padding: 0;
 }
 
 #icone_logout{
-    width: 5%;
-    margin: 0;
+    width: 15px;
+    margin-left: 15px;
     padding: 0;
 }
 #task1 {
@@ -307,15 +276,14 @@ nav a:hover {
     margin-right: 15px;
 }
 
-#footer {
+footer {
     background-color: #b897e3;
     color: #fff;
     text-align: center;
     padding: 20px;
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
-    position: fixed;
 }
 table {
     width: 100%;
@@ -336,56 +304,45 @@ table {
   tr:hover {
     background-color: #f5f5f5;
   }
+  #dia{
+    font-size: 13px;
+  }
+  .editar{
+    font-size: 5px;
+  }
  /* Responsividade */
  @media only screen and (max-width: 600px) {
-    table, thead, tbody, th, td, tr {
-      display: block;
-    }
-
+   *{
+    margin: 0%;
+   }
     th {
       display: none;
     }
-
-    tr {
-      margin-bottom: 20px;
-    }
-
-    td {
-      border: none;
-      position: relative;
-      padding-left: 50%;
-    }
-
-    td:before {
-      position: absolute;
-      top: 8px;
-      left: 6px;
-      width: 45%;
-      padding-right: 10px;
-      white-space: nowrap;
-      content: attr(data-label);
-    }
+    #dia{
+        font-size: 10px;
+      }
+      .editar{
+        font-size: 5px;
+      }
+      footer{
+        position: static;
+      }
+      nav{
+        margin: 0;
+      }
   }
 
 
 /* Adaptação para telas pequenas */
 @media only screen and (max-width: 600px) {
-    #footer {
+    footer {
         position: static;
     }
+    #todo{
+        margin-left: 30px;
+    }
 }
-    /* Adicione estas media queries no final do seu arquivo CSS existente */
-
-    @media only screen and (max-width: 1200px) {
-        .barra-lateral {
-            width: 200px;
-            max-width: 100%;
-        }
-
-        .kanban-block {
-            margin-left: 0;
-        }
-
+@media only screen and (max-width: 1200px) {
     }
 
     @media only screen and (max-width: 992px) {
