@@ -39,7 +39,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Erro ao atualizar o paciente: " . $conn->error;
     }
 } else {
-    echo "O formulário não foi enviado.";
 }
 
 $conn->close();
@@ -49,14 +48,13 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js.js" defer></script>
-    <link rel="stylesheet" href="./css/style-principal.css">
+    <link rel="stylesheet" href="novo-tarefa.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Nova tarefa</title>
+    <title>Editar tarefa</title>
 </head>
 
 <body>
     <header>
-        <img class="nkaiban" src="imagens/kaiban.jpg">
         <i id="burguer" class="material-icons" onclick="clickMenu()">menu</i>
         <div id="menu">
             <nav class="nav" id="nav">
@@ -72,7 +70,8 @@ $conn->close();
         <div class="barra-lateral">
             <div id="usuario">
                 <img id="img-cadastro" src="imagens/user-interface.png" alt="Usuário">
-                <p id="nome">Nome do usuário</p>
+                <?php
+                    ?>
             </div>
             <div id="div-busca">
                 <input type="text" id="txtBusca" name="procurar" placeholder="Pesquisar.." />
@@ -92,7 +91,7 @@ $conn->close();
                 <strong class="kanban-heading-text"></strong>
             </div>
         </div>
-        <h1>Adicionar nova tarefa</h1>
+        <h1>Editar tarefa</h1>
         <form class="formulario-novo " method="POST">
             <div class="adicionar">
             <input type="hidden" id="umtitulo" name="id" value="<?php echo $id; ?>">
