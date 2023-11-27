@@ -300,6 +300,7 @@ h1{
        font-size: 18px;
         margin-left: 5%;
         margin-right: 5%;
+        text-align: center;
     }
     .navbar .menu li {
         font-size: 16px;

@@ -62,7 +62,7 @@ $resultado = $conn->query($sql);
                     echo "<td>" . $row["tarefa_assunto"] . "</td>";
                     echo "<td id='dia'>" . $row["data_tarefa"] . "</td>";
                     echo "<td><button id='confirmButton'>Excluir</button></td>";     
-                    echo "<td><class='editar'>Editar</a></td>";
+                    echo "<td><a href='editar-tarefa.php?id=" . $row["tarefa_id"] . "'>Editar</a></td>";
                     echo "</tr>";
                 }
                 echo "</table>";
