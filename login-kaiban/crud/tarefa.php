@@ -18,8 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if ($conn->query($sql) === TRUE) {
         echo "Notas inserida com sucesso!";
-        header("./>tela-principal.php");
-        header("location: http://localhost/NKaibanOficial/login-kaiban/tela-principal.php");
+        header("Location: ../tela-principal.php");
     } else {
         echo "Erro ao inserir notas: " . $conn->error;
     }

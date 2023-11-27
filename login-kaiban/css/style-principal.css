@@ -5,6 +5,11 @@
     font-family: sans-serif;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 #imagem-usuario {
     width: 40px;
     /* ajuste a largura conforme necessário */
@@ -90,6 +95,7 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: relative;
 }
 
 nav ul {
@@ -98,6 +104,7 @@ nav ul {
     padding: 0;
     text-align: center;
     margin-top: 15px;
+    flex-grow: 1; /* Expande para ocupar o espaço disponível */
 }
 
 nav li {
@@ -133,6 +140,7 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: 5%;
 }
 
 #usuario {
@@ -243,6 +251,7 @@ nav a:hover {
     margin: 8px 2px 0px 0px;
     border: 0.1rem solid black;
     border-radius: 3px;
+
 }
 
 .flex {
@@ -281,9 +290,10 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px;
-    position: relative;
-    bottom: 0;
+    position: absolute;
+    bottom: 0 ;
     width: 100%;
+    margin-top: auto;
 }
 table {
     width: 100%;
@@ -325,7 +335,7 @@ table {
         font-size: 5px;
       }
       footer{
-        position: static;
+        position: absolute;
       }
       nav{
         margin: 0;
@@ -336,23 +346,20 @@ table {
 /* Adaptação para telas pequenas */
 @media only screen and (max-width: 600px) {
     footer {
-        position: static;
+        position: absolute;
     }
     #todo{
-        margin-left: 30px;
+        margin-left: 25px;
     }
 }
 @media only screen and (max-width: 1200px) {
+    todo{
+        margin-left: 25px;
+    }
     }
 
     @media only screen and (max-width: 992px) {
-        .barra-lateral {
-            width: 180px;
-        }
-
-        .kanban-block {
-            margin-left: 0;
-        }
+       
 
     }
 
@@ -364,19 +371,8 @@ table {
         .container {
             flex-direction: column;
         }
-
-        .barra-lateral {
-            width: 100%;
-            max-width: 100%;
-            position: static;
-            height: auto;
-            display: none;
-            /* Oculta a barra lateral em telas menores */
-        }
-
-        .kanban-block {
-            margin-left: 0;
-            width: 100%;
+        #todo{
+            margin-left: 30px;
         }
 
         .navbar .menu {
