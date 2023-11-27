@@ -11,7 +11,7 @@ if (!isset($_SESSION['funcionario_id'])) {
 
 $id_funcionario = $_SESSION['funcionario_id'];
 
-$sql = "SELECT * FROM tarefa_blocodenotas WHERE fk_funcionario_id = '$id_funcionario' ORDER BY tarefa_titulo";
+$sql = "SELECT * FROM tarefa_blocodenotas WHERE fk_funcionario_id = '$id_funcionario' ORDER BY title";
 $resultado = $conn->query($sql);
 ?>
 <!DOCTYPE html>
@@ -44,7 +44,7 @@ $resultado = $conn->query($sql);
             </div>
             <ul>
                 <li><a href="nova-tarefa.php">Nova tarefa</a></li>
-                <li><a href="calendario/calendario.php">Calendário</a></li>
+                <li><a href="http://localhost/NKAIBANOFICIAL-1/kaibancalendario/calendario.php">Calendário</a></li>
             </ul>
         </nav>
     </header>
@@ -58,9 +58,9 @@ $resultado = $conn->query($sql);
                 while ($row = $resultado->fetch_assoc()) {
                 
                     echo "<tr>";
-                    echo "<td>" . $row["tarefa_titulo"] . "</td>";
-                    echo "<td>" . $row["tarefa_assunto"] . "</td>";
-                    echo "<td id='dia'>" . $row["data_tarefa"] . "</td>";
+                    echo "<td>" . $row["title"] . "</td>";
+                    echo "<td>" . $row["description"] . "</td>";
+                    echo "<td id='dia'>" . $row["start"] . "</td>";
                     echo "<td><button id='confirmButton'>Excluir</button></td>";     
                     echo "<td><class='editar'>Editar</a></td>";
                     echo "</tr>";

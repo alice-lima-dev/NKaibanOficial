@@ -46,7 +46,11 @@ session_start();
                     <a href="../login-kaiban/tela-principal.php">
                         <p>Bloco de notas</p>
                     </a>
-                </div>
+                
+                    <a href="http://localhost/NKAIBANOFICIAL-1/kaibancalendario/calendario.php">
+                        <p>calendario</p>
+                    </a>
+</div>
             </div>
         </div>
         <div class="display">
@@ -61,8 +65,18 @@ session_start();
                     <input type="text" id="umtitulo" name="titulo" placeholder="Adicione o titulo de sua tarefa">
                 </div>
                 <div id="display">
-                    <input type="text" id="titulo" name="assunto" placeholder="Escreva sua tarefa">
+                    <input type="text" id="titulo" name="assunto" placeholder="Descreva sua tarefa">
                 </div>
+                <input type="date" id="umtitulo" name="inicio">
+                <input type="date" id="umtitulo" name="fim"> <br>
+
+            
+        <select name="tarefa_cor" id="titulo" required placehpolder="urgencia da tarefa">
+            <option value="blue" selected>Azul-baixa</option>
+            <option value="green" selected>Verde-Razóavel</option>
+            <option value="yellow" selected>Amarelo-Média</option>
+            <option value="red" selected>rosa-Alta</option>
+        </select>
                     <input type="submit" id="botao" name="Salvar">
             </div>
         </form>
