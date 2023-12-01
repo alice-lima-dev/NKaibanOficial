@@ -239,14 +239,16 @@ a {
     #img-logar{
         display: none;
     }
-
+    .image{
+        display: none;
+    }
     .teste {
         display: block;
     }
 
-    .formLogin {
-        margin: 5%;
-        height: 40%;
+    .form-cadastro {
+        margin: 15%;
+        width: 100%;
     }
 
     h5 {
@@ -259,6 +261,9 @@ a {
         margin-top: 70%;
         margin-left: 30%;
         display: none;
+    }
+    .redefinir-senha{
+        margin-left: 35px;
     }
 
 }
@@ -277,10 +282,10 @@ a {
         margin-right: 6%;
         max-width: 1000px;
     }
-
-    #img-logar{
+    .image{
         display: none;
     }
+   
 
     h5 {
         font-size: 20px;
@@ -293,6 +298,9 @@ a {
         margin-left: 35%;
         width: 35%;
         display: none;
+    }
+    .redefinir-senha{
+        margin-left: 35px;
     }
 }
 
@@ -308,7 +316,9 @@ a {
         margin-top: 15%;
         height: 70%;
     }
-
+    .image{
+        display: none;
+    }
     #img-logar{
         width: 50%;
     }

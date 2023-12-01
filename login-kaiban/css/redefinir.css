@@ -75,7 +75,14 @@ h3 {
     margin: 0;
     font-weight: 500;
 }
-
+#button{
+    border-radius: 5%;
+    border: #3F1573 solid 3px;
+    background-color: #ffffff;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 5%;
+}
 .form-cadastro input {
     padding: 15px;
     font-size: 14px;

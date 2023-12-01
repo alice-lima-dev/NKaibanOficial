@@ -16,7 +16,6 @@ session_start();
 
 <body>
     <header>
-        <img class="nkaiban" src="imagens/kaiban.jpeg">
         <i id="burguer" class="material-icons" onclick="clickMenu()">menu</i>
         <div id="menu">
             <nav class="nav" id="nav">
@@ -36,17 +35,16 @@ session_start();
                     echo '<p class="nome-teste">'.$_SESSION['nome'].'</p>';
                     ?>
             </div>
-            <div id="div-busca">
-                <input type="text" id="txtBusca" name="procurar" placeholder="Pesquisar.." />
-                <img src="imagens/lupa.png" id="btnBusca" alt="Buscar" />
-            </div>
-
             <div class="topicos">
                 <div>
                     <a href="../login-kaiban/tela-principal.php">
                         <p>Bloco de notas</p>
                     </a>
-                </div>
+                
+                    <a href="kaibancalendario/calendario.php">
+                        <p>Calendário</p>
+                    </a>
+</div>
             </div>
         </div>
         <div class="display">
@@ -61,8 +59,18 @@ session_start();
                     <input type="text" id="umtitulo" name="titulo" placeholder="Adicione o titulo de sua tarefa">
                 </div>
                 <div id="display">
-                    <input type="text" id="titulo" name="assunto" placeholder="Escreva sua tarefa">
+                    <input type="text" id="titulo" name="assunto" placeholder="Descreva sua tarefa">
                 </div>
+                <input type="date" id="umtitulo" name="inicio">
+                <input type="date" id="umtitulo" name="fim"> <br>
+
+            
+        <select name="tarefa_cor" id="titulo" required placehpolder="urgencia da tarefa">
+            <option value="blue" selected>Azul-Baixa</option>
+            <option value="green" selected>Verde-Razóavel</option>
+            <option value="purple" selected>Roxo-Média</option>
+            <option value="pink" selected>Rosa-Alta</option>
+        </select>
                     <input type="submit" id="botao" name="Salvar">
             </div>
         </form>

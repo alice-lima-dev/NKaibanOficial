@@ -1,6 +1,6 @@
 <?php
 
-$conn = new mysqli("localhost", "root", "", "bd_kaiban");
+$conn = new mysqli("localhost", "root", "", "db_kaiban");
 if ($conn->connect_error) {
     die("Erro de conexão" . $conn->connect_error);
 }
@@ -79,6 +79,9 @@ $conn->close();
             <input type="submit" name="botao" id="botao-cadastro">
             <div id="redefinir">
                 <a href="../login/redefinir.php" class="redefinir-senha">Redefinir Senha?</a>
+            </div>
+            <div id="redefinir">
+                <a href="../index.php" class="redefinir-senha">Voltar ao login</a>
             </div>
         </form>
     </div>

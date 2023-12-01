@@ -78,7 +78,7 @@ $conn->close();
                 <div id="senha">
                     <input id="senha-cadastro" type="text" name="senha" placeholder="Senha" required>
                 </div>
-                <input type="submit" name="button" id="button" placeholder="entrar">
+                <input type="submit" name="button" id="botao" placeholder="entrar">
 
                 <div id="redefinir">
                     <a href="../index.php" class="redefinir-senha">Voltar ao Login</a>
