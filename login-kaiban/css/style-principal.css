@@ -10,6 +10,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+
 #imagem-usuario {
     width: 40px;
     /* ajuste a largura conforme necessário */
@@ -31,6 +32,7 @@ a {
     display: flex;
     flex-direction: column;
 }
+
 .info {
     margin-left: 50%;
     display: flex;
@@ -67,6 +69,7 @@ a {
     margin-left: 38%;
     font-size: 35px;
 }
+
 #task-button {
     margin: 0.2rem 0rem 0.1rem 0rem;
     background-color: white;
@@ -96,6 +99,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     position: relative;
+    padding: 15px;
 }
 
 nav ul {
@@ -104,7 +108,8 @@ nav ul {
     padding: 0;
     text-align: center;
     margin-top: 15px;
-    flex-grow: 1; /* Expande para ocupar o espaço disponível */
+    flex-grow: 1;
+    /* Expande para ocupar o espaço disponível */
 }
 
 nav li {
@@ -136,7 +141,7 @@ nav a:hover {
     overflow: auto;
 }
 
-.img_nome{
+.img_nome {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -236,17 +241,20 @@ nav a:hover {
     margin-left: 20%;
     margin-top: 5%;
 }
+
 .logout-button {
     margin: 0;
     padding: 0;
 }
 
-#icone_logout{
+#icone_logout {
     width: 5%;
     margin-left: 15px;
     padding: 0;
 }
+
 #task1 {
+    overflow: auto;
     background-color: white;
     margin: 8px 2px 0px 0px;
     border: 0.1rem solid black;
@@ -291,56 +299,69 @@ footer {
     text-align: center;
     padding: 20px;
     position: absolute;
-    bottom: 0 ;
+    bottom: 0;
     width: 100%;
     margin-top: auto;
 }
+
 table {
     width: 100%;
     margin-bottom: 20px;
     border-collapse: collapse;
-   margin-right: 10px;
-  }
-  th, td {
+    margin-right: 10px;
+}
+
+th,
+td {
     padding: 15px;
     text-align: left;
     border-bottom: 1px solid #ddd;
-  }
-  th {
-    background-color:rgb(165, 89, 236); /* Lilás */
-    color: #fff;
-  }
+}
 
-  tr:hover {
+th {
+    background-color: rgb(165, 89, 236);
+    /* Lilás */
+    color: #fff;
+}
+
+tr:hover {
     background-color: #f5f5f5;
-  }
-  #dia{
+}
+
+#dia {
     font-size: 13px;
-  }
-  .editar{
+}
+
+.editar {
     font-size: 5px;
-  }
- /* Responsividade */
- @media only screen and (max-width: 600px) {
-   *{
-    margin: 0%;
-   }
-    th {
-      display: none;
+}
+
+/* Responsividade */
+@media only screen and (max-width: 600px) {
+    * {
+        margin: 0%;
     }
-    #dia{
+
+    th {
+        display: none;
+    }
+
+    #dia {
         font-size: 10px;
-      }
-      .editar{
+    }
+
+    .editar {
         font-size: 5px;
-      }
-      footer{
+    }
+
+    footer {
         position: absolute;
-      }
-      nav{
+    }
+
+    nav {
         margin: 0;
-      }
-  }
+    }
+}
 
 
 /* Adaptação para telas pequenas */
@@ -348,110 +369,110 @@ table {
     footer {
         position: absolute;
     }
-    #todo{
+
+    #todo {
+        margin-left: 25px;
+        width: auto;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    todo {
         margin-left: 25px;
     }
 }
-@media only screen and (max-width: 1200px) {
-    todo{
-        margin-left: 25px;
-    }
-    }
 
-    @media only screen and (max-width: 992px) {
-       
-
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
     }
 
-    @media only screen and (max-width: 768px) {
-        header {
-            padding: 10px 20px;
-        }
-
-        .container {
-            flex-direction: column;
-        }
-        #todo{
-            margin-left: 30px;
-        }
-
-        .navbar .menu {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap: 10px;
-        }
-
-        .nkaiban {
-            display: none;
-        }
-
-        .navbar .menu li {
-            font-size: 16px;
-        }
-
-        .menu {
-            display: none;
-            flex-direction: column;
-            background-color: #333;
-            position: absolute;
-            top: 30px;
-            left: 15px;
-            width: 100%;
-            padding: 10px 20px;
-        }
-
-        .menu.active {
-            display: flex;
-        }
-
-        .barra-lateral {
-            display: none;
-        }
-
-        .menu-icon {
-            display: flex;
-        }
-
-        #lixinho {
-            width: 20%;
-            margin-bottom: 0px;
-            margin-left: 5px;
-        }
-
-        #margin {
-            margin-right: 5px;
-            margin-top: 5px;
-            margin-left: 0px;
-        }
-
-        .info {
-            margin-left: 50%;
-            font-size: 15px;
-            white-space: nowrap;
-            margin-top: 15px;
-        }
-
-        .fazer {
-            margin-left: 33%;
-            font-size: 25px;
-        }
+    #todo {
+        margin-left: 30px;
+        width: auto;
     }
 
-    @media only screen and (max-width: 576px) {
-        .nkaiban {
-            display: none;
-        }
-
-        .navbar .menu li {
-            font-size: 14px;
-        }
-
-        .kanban-block {
-            margin-left: 10px;
-        }
-
-        .info {
-            font-size: 12px;
-        }
+    #icone_logout {
+        width: 35%;
     }
+
+    .navbar .menu {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .nkaiban {
+        display: none;
+    }
+
+    .navbar .menu li {
+        font-size: 16px;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 30px;
+        left: 15px;
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .barra-lateral {
+        display: none;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    #lixinho {
+        width: 20%;
+        margin-bottom: 0px;
+        margin-left: 5px;
+    }
+
+    #margin {
+        margin-right: 5px;
+        margin-top: 5px;
+        margin-left: 0px;
+    }
+
+    .info {
+        margin-left: 50%;
+        font-size: 15px;
+        white-space: nowrap;
+        margin-top: 15px;
+    }
+
+    .fazer {
+        margin-left: 33%;
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .nkaiban {
+        display: none;
+    }
+
+    .navbar .menu li {
+        font-size: 14px;
+    }
+
+    .kanban-block {
+        margin-left: 10px;
+    }
+
+    .info {
+        font-size: 12px;
+    }
+}

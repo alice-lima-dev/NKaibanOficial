@@ -10,13 +10,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $nome = $_POST['nome'];
     $setores = $_POST['escolha'];
     $email = $_POST['email'];
-    // $senha = $_POST['senha'];
+    $senha = $_POST['senha'];
 
     // $senha_cripto = password_hash($senha, PASSWORD_DEFAULT);
     $hashed_password = password_hash($_POST['senha'], PASSWORD_DEFAULT);
     // echo "$senha_cripto";
     // var_dump($hashed_password);
-    $sql = "INSERT INTO funcionario (funcionario_nome, funcionario_email, funcionario_setores, funcionario_senha) VALUES(?,?,?,?)";
+    $sql = "INSERT INTO funcionario (funcionario_nome, funcionario_email, funcionario_setores, funcionario_senha) VALUES (?,?,?,?)";
     $stmt = mysqli_prepare($conn, $sql);
     $stmt->bind_param("ssss", $nome, $email, $setores, $hashed_password);
     $stmt->execute();
@@ -74,7 +74,7 @@ $conn->close();
                 <label id="">Senha:</label>
             </div>
             <div id="senha">
-                <input id="senha-cadastro" type="text" name="senha" placeholder="Senha" required>
+                <input id="senha-cadastro" type="password" name="senha" placeholder="Senha" required>
             </div>
             <input type="submit" name="botao" id="botao-cadastro">
             <div id="redefinir">
